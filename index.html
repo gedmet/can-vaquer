@@ -223,7 +223,7 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 .plan-panel{display:grid;gap:2rem}
 @media (min-width:960px){.plan-panel{grid-template-columns:minmax(0,1fr) 22rem;gap:3.5rem;align-items:start}}
 .plan-sheet{margin:0;background:none;padding:0}
-.plan-art{position:relative;max-width:100%;container-type:inline-size;margin-inline:auto;max-height:80vh}
+.plan-art{position:relative;width:min(100%,calc(80vh*549/784));max-width:100%;container-type:inline-size;margin-inline:auto}
 .plan-art img{display:block;width:100%;height:100%}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .plan-art img{filter:invert(1) hue-rotate(180deg) brightness(.92)}}
 :root[data-theme="dark"] .plan-art img{filter:invert(1) hue-rotate(180deg) brightness(.92)}
