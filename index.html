@@ -230,6 +230,10 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 :root[data-theme="dark"] .plan-art img{filter:invert(1) hue-rotate(180deg) brightness(.92)}
 .room{position:absolute;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;text-align:center;line-height:1.15;pointer-events:none;color:var(--ink);white-space:nowrap}
 .room b{font-family:var(--display);font-weight:400;font-size:clamp(9px,1.7cqi,15px);background:color-mix(in srgb,var(--plaster) 88%,transparent);padding:0 .25em;border-radius:2px}
+.room.link{pointer-events:auto;text-decoration:none;cursor:pointer}
+.room.link b{text-decoration:underline;text-decoration-color:var(--shutter);text-underline-offset:3px;text-decoration-thickness:1px}
+.room.link:hover b{background:var(--shutter);color:var(--plaster)}
+.rl-link{color:var(--ink);text-decoration-color:var(--shutter);text-underline-offset:3px}
 .room i{font-style:normal;font-size:clamp(8px,1.3cqi,12px);color:var(--ink-soft);font-variant-numeric:tabular-nums}
 @container (min-width:400px){.room{display:flex}}
 .room-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr}
@@ -588,7 +592,7 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
         <figure class="plan-sheet"><div class="plan-art" style="aspect-ratio:549/359"><img src="plans/floor3.svg" alt="" loading="lazy" width="549" height="359">
           <span class="room" style="left:41.0%;top:77.3%"><b data-i18n="r_bed">Bedroom</b><i data-area="9.5">9.5 m²</i></span>
           <span class="room" style="left:16.2%;top:73.8%"><b data-i18n="r_bed">Bedroom</b><i data-area="15.2">15.2 m²</i></span>
-          <span class="room" style="left:72.3%;top:74.7%"><b data-i18n="r_masterbed">Master bedroom</b><i data-area="32.1">32.1 m²</i></span>
+          <a class="room link" href="rooms/master-bedroom.html" style="left:72.3%;top:74.7%"><b data-i18n="r_masterbed">Master bedroom</b><i data-area="32.1">32.1 m²</i></a>
           <span class="room" style="left:18.4%;top:30.0%"><b data-i18n="r_bed">Bedroom</b><i data-area="22.5">22.5 m²</i></span>
           <span class="room" style="left:66.3%;top:31.0%"><b data-i18n="r_living">Living room</b><i data-area="15.7">15.7 m²</i></span>
           <span class="room" style="left:84.4%;top:40.0%"><b data-i18n="r_dress">Dressing room</b><i data-area="6.4">6.4 m²</i></span>
@@ -600,7 +604,7 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
         </div></figure>
         <ul class="room-list">
           <li class="rl-head"><span data-i18n="rl_room">Room</span><span data-i18n="rl_dims">Dimensions</span><span data-i18n="rl_area">Area</span></li>
-          <li><span data-i18n="r_masterbed">Master bedroom</span><span class="dim"><em class="ph">— × — m</em></span><b><i data-area="32.1">32.1 m²</i></b></li>
+          <li><a class="rl-link" href="rooms/master-bedroom.html" data-i18n="r_masterbed">Master bedroom</a><span class="dim"><em class="ph">— × — m</em></span><b><i data-area="32.1">32.1 m²</i></b></li>
           <li><span data-i18n="r_bed">Bedroom</span><span class="dim"><em class="ph">— × — m</em></span><b><i data-area="22.5">22.5 m²</i></b></li>
           <li><span data-i18n="r_living">Living room</span><span class="dim"><em class="ph">— × — m</em></span><b><i data-area="15.7">15.7 m²</i></b></li>
           <li><span data-i18n="r_bed">Bedroom</span><span class="dim"><em class="ph">— × — m</em></span><b><i data-area="15.2">15.2 m²</i></b></li>
