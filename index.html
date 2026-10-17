@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><!-- remove at go-live -->
+<meta name="description" content="Can Vaquer: an eight-bedroom Mallorcan townhouse for sale in Felanitx, restored in lime, stone and old timber around a private courtyard with a pool.">
+<meta property="og:title" content="Can Vaquer · Felanitx, Mallorca">
+<meta property="og:description" content="An eight-bedroom Mallorcan townhouse for sale, with a private courtyard and pool.">
+<meta property="og:image" content="images/bedroom.jpg">
+<link rel="alternate" hreflang="en" href="#en"><link rel="alternate" hreflang="es" href="#es"><link rel="alternate" hreflang="ca" href="#ca"><link rel="alternate" hreflang="de" href="#de">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Can Vaquer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a walk through the house. Arched openings echo the courtyard arcade; lime-plaster ground, oak-beam ink, shutter-green accent. */
+:root{
+  --plaster:#ECE8E1;      /* lime plaster */
+  --plaster-2:#E2DDD3;    /* shaded plaster */
+  --ink:#27211C;          /* oak beam */
+  --ink-soft:#5E554C;
+  --shutter:#4C6A4E;      /* persiana green */
+  --mares:#B59C72;        /* marès sandstone */
+  --rule:rgba(39,33,28,.16);
+  --ph-bg:rgba(76,106,78,.08);
+  --display:"Marcellus","Cormorant Garamond",Georgia,serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --step--1:.8125rem; --step-0:1rem; --step-1:1.25rem; --step-2:1.75rem; --step-3:clamp(2rem,4vw,2.75rem); --step-4:clamp(3.25rem,9vw,6.5rem);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --plaster:#1C1916; --plaster-2:#26221E; --ink:#ECE5D9; --ink-soft:#B3A99C; --shutter:#93B48F; --mares:#C7AE84;
+  --rule:rgba(236,229,217,.16); --ph-bg:rgba(147,180,143,.10); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --plaster:#1C1916; --plaster-2:#26221E; --ink:#ECE5D9; --ink-soft:#B3A99C; --shutter:#93B48F; --mares:#C7AE84;
+  --rule:rgba(236,229,217,.16); --ph-bg:rgba(147,180,143,.10); color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--plaster)}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:700px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--shutter);outline-offset:3px}
+.label{font-size:var(--step--1);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+
+/* placeholder marker */
+.ph{display:inline-block;border:1px dashed var(--shutter);background:var(--ph-bg);color:var(--shutter);padding:0 .45em;border-radius:3px;font-style:normal;font-family:var(--body);font-size:.9em;line-height:1.5}
+.notice{background:var(--plaster-2);border-bottom:1px solid var(--rule);font-size:var(--step--1);color:var(--ink-soft)}
+.notice .wrap{padding-block:.55rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--plaster) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;gap:1rem;min-height:60px;padding-block:.5rem}
+.brand{font-family:var(--display);font-size:1.35rem;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+nav.main{display:flex;gap:1.4rem;margin-left:auto}
+nav.main a{text-decoration:none;font-size:.9rem;color:var(--ink-soft)}
+nav.main a:hover{color:var(--ink)}
+.langs{display:flex;border:1px solid var(--rule);border-radius:999px;padding:2px;margin-left:auto}
+nav.main + .langs{margin-left:0}
+.langs button{font:500 .75rem/1 var(--body);letter-spacing:.08em;border:0;background:none;color:var(--ink-soft);padding:.5rem .6rem;border-radius:999px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--ink);color:var(--plaster)}
+.menu-btn{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--rule);border-radius:999px;background:none;color:var(--ink);cursor:pointer;flex:none}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:16px;height:1.5px;background:currentColor;position:relative;transition:transform .2s ease}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-5px}.menu-btn span::after{top:5px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{transform:translateY(-5px) rotate(-45deg)}
+@media (max-width:820px){
+  header.top .wrap{gap:.6rem}
+  .menu-btn{display:inline-flex}
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;margin:0;flex-direction:column;gap:0;background:var(--plaster);border-bottom:1px solid var(--rule);box-shadow:0 12px 24px -16px rgba(0,0,0,.35);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:.25rem .75rem}
+  nav.main.open{display:flex}
+  nav.main a{padding:.9rem 0;border-bottom:1px solid var(--rule);font-size:1.05rem;color:var(--ink)}
+  nav.main a:last-child{border-bottom:0}
+}
+@media (max-width:360px){.brand{font-size:1.15rem}.langs button{padding:.5rem .45rem}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:2.5rem;padding-block:3rem 4rem;align-items:end}
+@media (min-width:860px){.hero .wrap{grid-template-columns:1.05fr .95fr;gap:4rem;padding-block:4.5rem 5.5rem}}
+.hero h1{font-size:var(--step-4);letter-spacing:-.01em;margin-block:.9rem 1.4rem}
+.hero .lede{font-size:var(--step-1);max-width:30ch;color:var(--ink-soft);line-height:1.5}
+.arch{position:relative;border-radius:999px 999px 0 0;overflow:hidden;background:var(--plaster-2);aspect-ratio:3/4.4;max-width:100%}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}
+.hero .arch{max-height:78vh;width:100%;justify-self:end}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem 2rem;margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--rule)}
+@media (min-width:520px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.fact b{display:block;white-space:nowrap;font-family:var(--display);font-weight:400;font-size:var(--step-2);line-height:1.1}
+.fact span{font-size:var(--step--1);color:var(--ink-soft)}
+.price{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.4rem;border-radius:999px;font:500 .95rem var(--body);text-decoration:none;border:1px solid var(--ink);cursor:pointer}
+.btn.solid{background:var(--shutter);border-color:var(--shutter);color:var(--plaster)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{filter:brightness(1.06)}
+
+section{border-top:1px solid var(--rule)}
+section > .wrap{padding-block:4.5rem}
+@media (min-width:860px){section > .wrap{padding-block:6.5rem}}
+.sec-head{display:grid;gap:.8rem;margin-bottom:2.75rem}
+.sec-head h2{font-size:var(--step-3)}
+
+/* the house */
+.house-grid{display:grid;gap:3rem}
+@media (min-width:860px){.house-grid{grid-template-columns:1.1fr .9fr;gap:5rem;align-items:start}}
+.prose{display:grid;gap:1.25rem;max-width:62ch;font-size:1.0625rem}
+.prose p:first-child::first-letter{font-family:var(--display);float:left;font-size:3.6em;line-height:.85;padding:.08em .12em 0 0;color:var(--shutter)}
+.status{margin-top:.5rem;color:var(--ink-soft);font-size:.95rem}
+.materials{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--rule)}
+.materials li{display:grid;grid-template-columns:2.25rem 1fr;gap:.9rem;align-items:center;padding:.95rem 0;border-bottom:1px solid var(--rule)}
+.materials .sw{width:2.25rem;height:2.25rem;border-radius:999px 999px 0 0;border:1px solid var(--rule)}
+.materials strong{font-weight:500;display:block}
+.materials small{color:var(--ink-soft);font-size:.875rem}
+
+/* gallery */
+.gallery{columns:1;column-gap:1.25rem}
+@media (min-width:600px){.gallery{columns:2}}
+@media (min-width:960px){.gallery{columns:3}}
+.gallery figure{break-inside:avoid;margin:0 0 1.75rem}
+.gallery button{display:block;width:100%;padding:0;border:0;background:var(--plaster-2);cursor:zoom-in;border-radius:2px;overflow:hidden}
+.gallery figure.arched button{border-radius:999px 999px 2px 2px}
+.gallery img{display:block;width:100%;height:auto;transition:transform .6s ease}
+.gallery button:hover img{transform:scale(1.025)}
+.gallery figcaption{font-size:.875rem;color:var(--ink-soft);margin-top:.6rem;display:flex;gap:.6rem}
+.gallery figcaption i{font-style:normal;font-variant-numeric:tabular-nums;color:var(--mares)}
+.disclaimer{font-size:.875rem;color:var(--ink-soft);margin-top:.5rem;max-width:60ch}
+
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:92vh}
+dialog.lb::backdrop{background:rgba(20,17,14,.88)}
+dialog.lb img{display:block;max-width:100%;max-height:84vh;width:auto;height:auto;margin-inline:auto}
+dialog.lb p{color:#ECE5D9;text-align:center;font-size:.9rem;margin-top:.75rem}
+dialog.lb .close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:999px;border:1px solid rgba(236,229,217,.4);background:rgba(20,17,14,.5);color:#ECE5D9;font-size:1.4rem;cursor:pointer}
+
+/* key facts table */
+.spec{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.spec th,.spec td{text-align:left;padding:1rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.spec th{font-weight:400;color:var(--ink-soft);width:40%;padding-right:1rem}
+.spec td{font-weight:500}
+.spec tr:first-child th,.spec tr:first-child td{border-top:1px solid var(--rule)}
+.details-grid{display:grid;gap:3rem}
+@media (min-width:860px){.details-grid{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}}
+
+/* location */
+.loc-grid{display:grid;gap:3rem}
+@media (min-width:860px){.loc-grid{grid-template-columns:1fr 1fr;gap:5rem}}
+.dist{list-style:none;margin:0;padding:0;display:grid}
+.dist li{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--rule)}
+.dist li:first-child{border-top:1px solid var(--rule)}
+.dist b{font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
+.fine{font-size:.8125rem;color:var(--ink-soft);margin-top:.9rem}
+
+/* contact */
+#contact{background:var(--plaster-2)}
+.contact-grid{display:grid;gap:3rem}
+@media (min-width:860px){.contact-grid{grid-template-columns:.9fr 1.1fr;gap:5rem}}
+.agent{display:grid;gap:.9rem;margin-top:2rem}
+.agent div{display:grid;gap:.15rem}
+form.enq{display:grid;gap:1rem}
+.row2{display:grid;gap:1rem}
+@media (min-width:600px){.row2{grid-template-columns:1fr 1fr}}
+form.enq label{display:grid;gap:.35rem;font-size:.875rem;color:var(--ink-soft)}
+form.enq input,form.enq textarea{font:inherit;color:var(--ink);background:var(--plaster);border:1px solid var(--rule);border-radius:4px;padding:.75rem .85rem;width:100%;min-width:0}
+form.enq textarea{min-height:8rem;resize:vertical}
+form.enq input:focus,form.enq textarea:focus{outline:2px solid var(--shutter);outline-offset:0;border-color:transparent}
+.formnote{font-size:.875rem;color:var(--shutter);min-height:1.4em}
+
+footer{border-top:1px solid var(--rule)}
+footer .wrap{padding-block:2.5rem;display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between;font-size:.8125rem;color:var(--ink-soft)}
+footer .brand{font-size:1.15rem;color:var(--ink)}
+
+.hero .arch img{animation:reveal 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes reveal{from{transform:scale(1.08)}to{transform:none}}
+
+/* floor plans */
+.plan-tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}
+.plan-tabs button{font:500 .875rem var(--body);color:var(--ink-soft);background:none;border:1px solid var(--rule);border-radius:999px;padding:.6rem 1rem;cursor:pointer}
+.plan-tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--plaster)}
+.plan-panel{display:grid;gap:2rem}
+@media (min-width:960px){.plan-panel{grid-template-columns:minmax(0,1fr) 17rem;gap:3.5rem;align-items:start}}
+.plan-sheet{margin:0;background:#F3EEE6;border:1px solid var(--rule);padding:clamp(10px,3vw,32px);border-radius:2px}
+.plan-art{position:relative;max-width:100%;container-type:inline-size;margin-inline:auto;max-height:80vh}
+.plan-art img{display:block;width:100%;height:100%}
+.room{position:absolute;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;text-align:center;line-height:1.15;pointer-events:none;color:#4E3B2E;white-space:nowrap}
+.room b{font-family:var(--display);font-weight:400;font-size:clamp(9px,1.7cqi,15px);background:rgba(243,238,230,.85);padding:0 .25em;border-radius:2px}
+.room i{font-style:normal;font-size:clamp(8px,1.3cqi,12px);color:#8A7461;font-variant-numeric:tabular-nums}
+@container (min-width:520px){.room{display:flex}}
+.room-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));column-gap:2rem}
+@media (min-width:960px){.room-list{grid-template-columns:1fr}}
+.room-list li{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule);font-size:.9375rem}
+.room-list b{font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
+.room-list i{font-style:normal}
+
+/* features */
+.feat-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:0 0 3.5rem;border-top:1px solid var(--rule)}
+@media (min-width:640px){.feat-stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1000px){.feat-stats{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.feat-stats div{padding:1.25rem 1rem 1.25rem 0;border-bottom:1px solid var(--rule);display:flex;flex-direction:column-reverse;gap:.3rem}
+.feat-stats dt{font-size:var(--step--1);color:var(--ink-soft)}
+.feat-stats dd{margin:0;font-family:var(--display);font-size:var(--step-2);line-height:1.1;white-space:nowrap}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:2.75rem 3rem}
+.feat-group h3{font-size:var(--step-1);margin-bottom:1rem;color:var(--shutter)}
+.feat-group ul{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.feat-group li{position:relative;padding-left:1.35rem;line-height:1.45}
+.feat-group li::before{content:"";position:absolute;left:0;top:.38em;width:.6rem;height:.75rem;border-radius:999px 999px 0 0;background:var(--mares);opacity:.75}
+</style>
+
+</head>
+<body>
+<div class="notice" role="note"><div class="wrap"><span class="ph" data-i18n="ph_tag">To confirm</span><span data-i18n="notice">Preview. Items with a dashed outline are placeholders to fill in before launch.</span></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Can Vaquer</a>
+    <nav class="main" id="main-nav" aria-label="Sections">
+      <a href="#house" data-i18n="nav_house">The house</a>
+      <a href="#features" data-i18n="nav_feat">Features</a>
+      <a href="#rooms" data-i18n="nav_rooms">Rooms</a>
+      <a href="#plans" data-i18n="nav_plans">Plans</a>
+      <a href="#details" data-i18n="nav_details">Key facts</a>
+      <a href="#location" data-i18n="nav_location">Location</a>
+      <a href="#contact" data-i18n="nav_contact">Viewings</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="ca" aria-pressed="false">CA</button>
+      <button type="button" data-lang="de" aria-pressed="false">DE</button>
+    </div>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="menu"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="label" data-i18n="eyebrow">For sale · Felanitx, Mallorca</p>
+        <h1>Can Vaquer</h1>
+        <p class="lede" data-i18n="lede">A Mallorcan townhouse of eight bedrooms, restored in lime, stone and old timber around a private courtyard with a pool.</p>
+        <div class="facts">
+          <div class="fact"><b>8</b><span data-i18n="f_bed">Bedrooms</span></div>
+          <div class="fact"><b>7</b><span data-i18n="f_bath">Bathrooms</span></div>
+          <div class="fact"><b>700&nbsp;m²</b><span data-i18n="f_area">Built area</span></div>
+          <div class="fact"><b data-i18n="f_pool_v">Pool</b><span data-i18n="f_pool">In the courtyard</span></div>
+        </div>
+        <div class="price"><span class="label" data-i18n="price">Price</span><em class="ph" data-i18n="price_v">Around €2.5m</em></div>
+        <div class="actions">
+          <a class="btn solid" href="#contact" data-i18n="cta">Arrange a private viewing</a>
+          <a class="btn ghost" href="#rooms" data-i18n="cta2">See the rooms</a>
+        </div>
+      </div>
+      <div class="arch"><img src="images/bedroom.jpg" width="1068" height="2000" alt="" data-i18n-alt="alt_bedroom" fetchpriority="high"></div>
+    </div>
+  </div>
+
+  <section id="house">
+    <div class="wrap">
+      <div class="sec-head"><p class="label" data-i18n="house_label">The house</p><h2 data-i18n="house_h">Restored by hand, room by room</h2></div>
+      <div class="house-grid">
+        <div class="prose">
+          <p data-i18n="house_p1">Can Vaquer is a traditional townhouse in Felanitx, a market town in the south-east of Mallorca. The renovation keeps what made it: tall rooms under dark timber beams, walls of local stone, deep window reveals with wooden shutters, and handmade terracotta floors laid on the diagonal.</p>
+          <p data-i18n="house_p2">The new work is quiet and exact. Walls are finished in lime plaster, bathrooms are lined in glazed handmade tiles and pale stone, and the taps are brushed bronze. Out in the courtyard, a sandstone arcade, a lemon tree, a clementine tree and a vine surround the new pool.</p>
+          <p class="status"><span data-i18n="status">Renovation in progress. Completion expected</span> <strong data-i18n="ph_date">May 2027</strong></p>
+        </div>
+        <ul class="materials" aria-label="Materials">
+          <li><span class="sw" style="background:#D8CBB0"></span><div><strong data-i18n="m1">Marès sandstone</strong><small data-i18n="m1s">Arches and arcade around the courtyard</small></div></li>
+          <li><span class="sw" style="background:#E8E3D9"></span><div><strong data-i18n="m2">Lime plaster</strong><small data-i18n="m2s">Breathable, hand-trowelled walls</small></div></li>
+          <li><span class="sw" style="background:#4A3426"></span><div><strong data-i18n="m3">Timber beams</strong><small data-i18n="m3s">Original ceilings, kept and restored</small></div></li>
+          <li><span class="sw" style="background:#D49A7E"></span><div><strong data-i18n="m4">Terracotta floors</strong><small data-i18n="m4s">Handmade tiles by Can Benito, laid on the diagonal</small></div></li>
+          <li><span class="sw" style="background:#E7CDAE"></span><div><strong data-i18n="m5">Glazed handmade tiles</strong><small data-i18n="m5s">Showers and bathroom walls</small></div></li>
+          <li><span class="sw" style="background:#8A5F40"></span><div><strong data-i18n="m6">Brushed bronze</strong><small data-i18n="m6s">Taps, shower sets and bath filler</small></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head"><p class="label" data-i18n="feat_label">Features</p><h2 data-i18n="feat_h">What the house offers</h2></div>
+      <dl class="feat-stats">
+        <div><dt data-i18n="f_bed">Bedrooms</dt><dd>8</dd></div>
+        <div><dt data-i18n="f_bath">Bathrooms</dt><dd>7</dd></div>
+        <div><dt data-i18n="f_area">Built area</dt><dd>≈&nbsp;700&nbsp;m²</dd></div>
+        <div><dt data-i18n="s_plot">Plot</dt><dd>393&nbsp;m²</dd></div>
+        <div><dt data-i18n="f_floors_n">Floors</dt><dd>5</dd></div>
+        <div><dt data-i18n="f_done">Completion</dt><dd data-i18n="ph_date">May 2027</dd></div>
+      </dl>
+      <div class="feat-grid">
+        <div class="feat-group"><h3 data-i18n="g_house">The house</h3><ul>
+          <li data-i18n="fh1">8 bedrooms and 7 bathrooms</li>
+          <li data-i18n="fh2">About 700 m² built across five floors</li>
+          <li data-i18n="fh3">393 m² plot in the historic centre of Felanitx</li>
+          <li data-i18n="fh4">Full renovation, completing May 2027</li>
+          <li data-i18n="fp1">Two garages for parking</li>
+          <li data-i18n="fp4">Wine cellar for over 200 bottles</li>
+          <li data-i18n="fp11">Cheese cave and humidor</li>
+          <li data-i18n="fp2">Storerooms and a plant room</li>
+        </ul></div>
+        <div class="feat-group"><h3 data-i18n="g_living">Living spaces</h3><ul>
+          <li data-i18n="fl1">Entrance hall, sitting room, TV room and study</li>
+          <li data-i18n="fl2">Kitchen with pantry, dining room and formal dining room</li>
+          <li data-i18n="fl3">Second formal dining room and kitchenette on the first floor</li>
+          <li data-i18n="fl4">Further living rooms on the first and second floors</li>
+        </ul></div>
+        <div class="feat-group"><h3 data-i18n="g_bed">Bedrooms and bathrooms</h3><ul>
+          <li data-i18n="fb1">Two main bedroom suites with dressing rooms and en-suite bathrooms</li>
+          <li data-i18n="fb2">Walk-in showers in handmade glazed tile</li>
+          <li data-i18n="fb3">Freestanding bath with a brushed bronze filler</li>
+          <li data-i18n="fb5">Electric underfloor heating in the bathrooms</li>
+          <li data-i18n="fb4">Guest WC on the ground floor</li>
+        </ul></div>
+        <div class="feat-group"><h3 data-i18n="g_out">Outdoors</h3><ul>
+          <li data-i18n="fo1">Private courtyard with a swimming pool</li>
+          <li data-i18n="fo2">Sandstone arcade with an outdoor dining area</li>
+          <li data-i18n="fo3">Lemon tree, clementine tree and a vine</li>
+          <li data-i18n="fo4">Sun terrace beside the pool</li>
+          <li data-i18n="fo5">Roof terrace with panoramic views</li>
+          <li data-i18n="fo6">Irrigation system fed from underground rainwater storage tanks</li>
+        </ul></div>
+        <div class="feat-group"><h3 data-i18n="g_craft">Craft and materials</h3><ul>
+          <li data-i18n="fc1">Original timber beams and local stone walls</li>
+          <li data-i18n="fc2">Lime-plastered walls</li>
+          <li data-i18n="fc5">Handmade terracotta floor tiles by Can Benito</li>
+          <li data-i18n="fc6">Handmade stone sinks by d’Aigo Mallorca</li>
+          <li data-i18n="fc3">Wooden shutters and deep window reveals</li>
+          <li data-i18n="fc4">Brushed bronze taps and fittings</li>
+        </ul></div>
+        <div class="feat-group"><h3 data-i18n="g_prac">Systems</h3><ul>
+          <li data-i18n="fp3">Air source heat pump for heating and cooling</li>
+          <li data-i18n="fp6">Heat pump cylinders for domestic hot water</li>
+          <li data-i18n="fp7">Whole-house water filtration and softening</li>
+          <li data-i18n="fp8">Mains water storage and pressurisation system</li>
+          <li data-i18n="fp5">Three-phase electricity with provision for electric vehicle charging up to 27 kW</li>
+          <li data-i18n="fp9">Fibre to the premises available in the street, up to 2 Gbit/s</li>
+          <li data-i18n="fp10">Cat7 cabling to multiple Wi-Fi 7 access points throughout</li>
+          <li><span data-i18n="s_energy">Energy rating</span> <em class="ph" data-i18n="ph_tag">To confirm</em></li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+  <section id="rooms">
+    <div class="wrap">
+      <div class="sec-head"><p class="label" data-i18n="rooms_label">Rooms and details</p><h2 data-i18n="rooms_h">A walk through the house</h2></div>
+      <div class="gallery">
+        <figure class="arched"><button type="button"><img src="images/courtyard.jpg" width="1800" height="1504" loading="lazy" alt="" data-i18n-alt="c_courtyard"></button><figcaption><i>01</i><span data-i18n="c_courtyard">Through the stone arch to the courtyard</span></figcaption></figure>
+        <figure><button type="button"><img src="images/stair.jpg" width="1012" height="1800" loading="lazy" alt="" data-i18n-alt="c_stair"></button><figcaption><i>02</i><span data-i18n="c_stair">The stair to the upper floor</span></figcaption></figure>
+        <figure><button type="button"><img src="images/beams.jpg" width="1350" height="1600" loading="lazy" alt="" data-i18n-alt="c_beams"></button><figcaption><i>03</i><span data-i18n="c_beams">Timber beams over a stone wall</span></figcaption></figure>
+        <figure><button type="button"><img src="images/facade.jpg" width="1691" height="1800" loading="lazy" alt="" data-i18n-alt="c_facade"></button><figcaption><i>04</i><span data-i18n="c_facade">The house seen from the courtyard</span></figcaption></figure>
+        <figure><button type="button"><img src="images/shower.jpg" width="961" height="1800" loading="lazy" alt="" data-i18n-alt="c_shower"></button><figcaption><i>05</i><span data-i18n="c_shower">Walk-in shower in glazed tile</span></figcaption></figure>
+        <figure class="arched"><button type="button"><img src="images/doorway.jpg" width="1301" height="1800" loading="lazy" alt="" data-i18n-alt="c_doorway"></button><figcaption><i>06</i><span data-i18n="c_doorway">Lime plaster and exposed stone</span></figcaption></figure>
+        <figure><button type="button"><img src="images/bathwindow.jpg" width="1800" height="1440" loading="lazy" alt="" data-i18n-alt="c_bathwindow"></button><figcaption><i>07</i><span data-i18n="c_bathwindow">Bathroom under a stone lintel</span></figcaption></figure>
+        <figure><button type="button"><img src="images/spout.jpg" width="962" height="1800" loading="lazy" alt="" data-i18n-alt="c_spout"></button><figcaption><i>08</i><span data-i18n="c_spout">Brushed bronze bath filler</span></figcaption></figure>
+        <figure><button type="button"><img src="images/bedroom.jpg" width="1068" height="2000" loading="lazy" alt="" data-i18n-alt="c_bedroom"></button><figcaption><i>09</i><span data-i18n="c_bedroom">Bedroom with green shutters</span></figcaption></figure>
+      </div>
+      <p class="disclaimer" data-i18n="disclaimer">Photographs taken during the final stage of renovation. Finished photography will follow.</p>
+    </div>
+  </section>
+
+  <section id="plans">
+    <div class="wrap">
+      <div class="sec-head"><p class="label" data-i18n="plans_label">Floor plans</p><h2 data-i18n="plans_h">The layout, floor by floor</h2></div>
+      <div class="plan-tabs" role="tablist" aria-label="Floors">
+        <button type="button" role="tab" id="tab-0" aria-controls="plan-0" aria-selected="false" data-i18n="fl_lg">Lower ground floor</button>
+        <button type="button" role="tab" id="tab-1" aria-controls="plan-1" aria-selected="true" data-i18n="fl_g">Ground floor</button>
+        <button type="button" role="tab" id="tab-2" aria-controls="plan-2" aria-selected="false" data-i18n="fl_1">First floor</button>
+        <button type="button" role="tab" id="tab-3" aria-controls="plan-3" aria-selected="false" data-i18n="fl_2">Second floor</button>
+      </div>
+      <div class="plan-panel" role="tabpanel" id="plan-0" aria-labelledby="tab-0" hidden>
+        <figure class="plan-sheet"><div class="plan-art" style="aspect-ratio:549/716"><img src="plans/floor0.svg" alt="" loading="lazy" width="549" height="716">
+          <span class="room" style="left:14.8%;top:84.9%"><b data-i18n="r_garage">Garage</b><i data-area="15.0">15.0 m²</i></span>
+          <span class="room" style="left:63.7%;top:90.4%"><b data-i18n="r_store">Storeroom</b><i data-area="24.4">24.4 m²</i></span>
+          <span class="room" style="left:14.8%;top:69.2%"><b data-i18n="r_plant">Plant room</b><i data-area="9.4">9.4 m²</i></span>
+          <span class="room" style="left:84.8%;top:23.4%"><b data-i18n="r_store">Storeroom</b></span>
+        </div></figure>
+        <ul class="room-list">
+          <li><span data-i18n="r_store">Storeroom</span><b><i data-area="24.4">24.4 m²</i></b></li>
+          <li><span data-i18n="r_garage">Garage</span><b><i data-area="15.0">15.0 m²</i></b></li>
+          <li><span data-i18n="r_plant">Plant room</span><b><i data-area="9.4">9.4 m²</i></b></li>
+          <li><span data-i18n="r_store">Storeroom</span><b>–</b></li>
+        </ul>
+      </div>
+      <div class="plan-panel" role="tabpanel" id="plan-1" aria-labelledby="tab-1">
+        <figure class="plan-sheet"><div class="plan-art" style="aspect-ratio:549/784"><img src="plans/floor1.svg" alt="" loading="lazy" width="549" height="784">
+          <span class="room" style="left:17.4%;top:16.1%"><b data-i18n="r_study">Study</b><i data-area="18.0">18.0 m²</i></span>
+          <span class="room" style="left:16.4%;top:34.0%"><b data-i18n="r_tv">TV room</b><i data-area="18.4">18.4 m²</i></span>
+          <span class="room" style="left:42.1%;top:16.1%"><b data-i18n="r_hall">Entrance hall</b><i data-area="19.6">19.6 m²</i></span>
+          <span class="room" style="left:67.8%;top:34.0%"><b data-i18n="r_dining">Dining room</b><i data-area="18.5">18.5 m²</i></span>
+          <span class="room" style="left:67.8%;top:13.0%"><b data-i18n="r_formal">Formal dining room</b><i data-area="16.4">16.4 m²</i></span>
+          <span class="room" style="left:85.7%;top:34.1%"><b data-i18n="r_kitchen">Kitchen</b><i data-area="16.5">16.5 m²</i></span>
+          <span class="room" style="left:82.7%;top:7.4%"><b data-i18n="r_store">Storeroom</b><i data-area="6.8">6.8 m²</i></span>
+          <span class="room" style="left:84.3%;top:17.2%"><b data-i18n="r_pantry">Pantry</b><i data-area="8.5">8.5 m²</i></span>
+          <span class="room" style="left:57.3%;top:16.5%"><b data-i18n="r_wc">WC</b></span>
+          <span class="room" style="left:40.6%;top:31.8%"><b data-i18n="r_sitting">Sitting room</b><i data-area="24.6">24.6 m²</i></span>
+        </div></figure>
+        <ul class="room-list">
+          <li><span data-i18n="r_sitting">Sitting room</span><b><i data-area="24.6">24.6 m²</i></b></li>
+          <li><span data-i18n="r_hall">Entrance hall</span><b><i data-area="19.6">19.6 m²</i></b></li>
+          <li><span data-i18n="r_dining">Dining room</span><b><i data-area="18.5">18.5 m²</i></b></li>
+          <li><span data-i18n="r_tv">TV room</span><b><i data-area="18.4">18.4 m²</i></b></li>
+          <li><span data-i18n="r_study">Study</span><b><i data-area="18.0">18.0 m²</i></b></li>
+          <li><span data-i18n="r_kitchen">Kitchen</span><b><i data-area="16.5">16.5 m²</i></b></li>
+          <li><span data-i18n="r_formal">Formal dining room</span><b><i data-area="16.4">16.4 m²</i></b></li>
+          <li><span data-i18n="r_pantry">Pantry</span><b><i data-area="8.5">8.5 m²</i></b></li>
+          <li><span data-i18n="r_store">Storeroom</span><b><i data-area="6.8">6.8 m²</i></b></li>
+          <li><span data-i18n="r_wc">WC</span><b>–</b></li>
+        </ul>
+      </div>
+      <div class="plan-panel" role="tabpanel" id="plan-2" aria-labelledby="tab-2" hidden>
+        <figure class="plan-sheet"><div class="plan-art" style="aspect-ratio:549/784"><img src="plans/floor2.svg" alt="" loading="lazy" width="549" height="784">
+          <span class="room" style="left:40.2%;top:15.5%"><b data-i18n="r_formal">Formal dining room</b><i data-area="23.4">23.4 m²</i></span>
+          <span class="room" style="left:39.3%;top:32.8%"><b data-i18n="r_living">Living room</b><i data-area="18.3">18.3 m²</i></span>
+          <span class="room" style="left:19.9%;top:35.0%"><b data-i18n="r_bed">Bedroom</b><i data-area="26.7">26.7 m²</i></span>
+          <span class="room" style="left:83.4%;top:9.1%"><b data-i18n="r_bed">Bedroom</b></span>
+          <span class="room" style="left:66.9%;top:33.3%"><b data-i18n="r_mainbed">Main bedroom</b><i data-area="15.7">15.7 m²</i></span>
+          <span class="room" style="left:23.0%;top:11.3%"><b data-i18n="r_bath">Bathroom</b></span>
+          <span class="room" style="left:9.9%;top:15.9%"><b data-i18n="r_bath">Bathroom</b></span>
+          <span class="room" style="left:81.8%;top:20.0%"><b data-i18n="r_kitchen">Kitchen</b><i data-area="5.7">5.7 m²</i></span>
+          <span class="room" style="left:66.8%;top:12.1%"><b data-i18n="r_living">Living room</b><i data-area="15.8">15.8 m²</i></span>
+          <span class="room" style="left:85.9%;top:31.0%"><b data-i18n="r_dress">Dressing room</b><i data-area="5.7">5.7 m²</i></span>
+          <span class="room" style="left:85.6%;top:37.3%"><b data-i18n="r_mainbath">Main bathroom</b><i data-area="5.3">5.3 m²</i></span>
+          <span class="room" style="left:89.4%;top:19.1%"><b data-i18n="r_shower">Shower room</b><i data-area="2.6">2.6 m²</i></span>
+        </div></figure>
+        <ul class="room-list">
+          <li><span data-i18n="r_bed">Bedroom</span><b><i data-area="26.7">26.7 m²</i></b></li>
+          <li><span data-i18n="r_formal">Formal dining room</span><b><i data-area="23.4">23.4 m²</i></b></li>
+          <li><span data-i18n="r_living">Living room</span><b><i data-area="18.3">18.3 m²</i></b></li>
+          <li><span data-i18n="r_living">Living room</span><b><i data-area="15.8">15.8 m²</i></b></li>
+          <li><span data-i18n="r_mainbed">Main bedroom</span><b><i data-area="15.7">15.7 m²</i></b></li>
+          <li><span data-i18n="r_kitchen">Kitchen</span><b><i data-area="5.7">5.7 m²</i></b></li>
+          <li><span data-i18n="r_dress">Dressing room</span><b><i data-area="5.7">5.7 m²</i></b></li>
+          <li><span data-i18n="r_mainbath">Main bathroom</span><b><i data-area="5.3">5.3 m²</i></b></li>
+          <li><span data-i18n="r_shower">Shower room</span><b><i data-area="2.6">2.6 m²</i></b></li>
+          <li><span data-i18n="r_bed">Bedroom</span><b>–</b></li>
+          <li><span data-i18n="r_bath">Bathroom</span><b>–</b></li>
+          <li><span data-i18n="r_bath">Bathroom</span><b>–</b></li>
+        </ul>
+      </div>
+      <div class="plan-panel" role="tabpanel" id="plan-3" aria-labelledby="tab-3" hidden>
+        <figure class="plan-sheet"><div class="plan-art" style="aspect-ratio:549/359"><img src="plans/floor3.svg" alt="" loading="lazy" width="549" height="359">
+          <span class="room" style="left:41.0%;top:77.3%"><b data-i18n="r_bed">Bedroom</b><i data-area="9.5">9.5 m²</i></span>
+          <span class="room" style="left:16.2%;top:73.8%"><b data-i18n="r_bed">Bedroom</b><i data-area="15.2">15.2 m²</i></span>
+          <span class="room" style="left:72.3%;top:74.7%"><b data-i18n="r_mainbed">Main bedroom</b><i data-area="32.1">32.1 m²</i></span>
+          <span class="room" style="left:18.4%;top:30.0%"><b data-i18n="r_bed">Bedroom</b><i data-area="22.5">22.5 m²</i></span>
+          <span class="room" style="left:66.3%;top:31.0%"><b data-i18n="r_living">Living room</b><i data-area="15.7">15.7 m²</i></span>
+          <span class="room" style="left:84.4%;top:40.0%"><b data-i18n="r_dress">Dressing room</b><i data-area="6.4">6.4 m²</i></span>
+          <span class="room" style="left:83.4%;top:19.5%"><b data-i18n="r_bath">Bathroom</b><i data-area="8.0">8.0 m²</i></span>
+          <span class="room" style="left:56.6%;top:17.7%"><b data-i18n="r_stair">Stair</b><i data-area="6.0">6.0 m²</i></span>
+          <span class="room" style="left:37.7%;top:22.4%"><b data-i18n="r_bath">Bathroom</b><i data-area="5.6">5.6 m²</i></span>
+          <span class="room" style="left:50.2%;top:25.3%"><b data-i18n="r_bath">Bathroom</b><i data-area="4.4">4.4 m²</i></span>
+          <span class="room" style="left:44.5%;top:43.1%"><b data-i18n="r_landing">Landing</b><i data-area="9.5">9.5 m²</i></span>
+        </div></figure>
+        <ul class="room-list">
+          <li><span data-i18n="r_mainbed">Main bedroom</span><b><i data-area="32.1">32.1 m²</i></b></li>
+          <li><span data-i18n="r_bed">Bedroom</span><b><i data-area="22.5">22.5 m²</i></b></li>
+          <li><span data-i18n="r_living">Living room</span><b><i data-area="15.7">15.7 m²</i></b></li>
+          <li><span data-i18n="r_bed">Bedroom</span><b><i data-area="15.2">15.2 m²</i></b></li>
+          <li><span data-i18n="r_bed">Bedroom</span><b><i data-area="9.5">9.5 m²</i></b></li>
+          <li><span data-i18n="r_landing">Landing</span><b><i data-area="9.5">9.5 m²</i></b></li>
+          <li><span data-i18n="r_bath">Bathroom</span><b><i data-area="8.0">8.0 m²</i></b></li>
+          <li><span data-i18n="r_dress">Dressing room</span><b><i data-area="6.4">6.4 m²</i></b></li>
+          <li><span data-i18n="r_stair">Stair</span><b><i data-area="6.0">6.0 m²</i></b></li>
+          <li><span data-i18n="r_bath">Bathroom</span><b><i data-area="5.6">5.6 m²</i></b></li>
+          <li><span data-i18n="r_bath">Bathroom</span><b><i data-area="4.4">4.4 m²</i></b></li>
+        </ul>
+      </div>
+      <p class="disclaimer" data-i18n="plans_note">Indicative plans, not to scale. Room sizes are approximate and the final layout may differ.</p>
+    </div>
+  </section>
+  <section id="details">
+    <div class="wrap details-grid">
+      <div>
+        <div class="sec-head"><p class="label" data-i18n="details_label">Key facts</p><h2 data-i18n="details_h">At a glance</h2></div>
+        <table class="spec">
+          <tr><th data-i18n="f_bed">Bedrooms</th><td>8</td></tr>
+          <tr><th data-i18n="f_bath">Bathrooms</th><td>7</td></tr>
+          <tr><th data-i18n="f_area">Built area</th><td>≈ 700 m²</td></tr>
+          <tr><th data-i18n="s_plot">Plot</th><td>393 m²</td></tr>
+          <tr><th data-i18n="s_floors">Floors</th><td>5</td></tr>
+          <tr><th data-i18n="s_out">Outdoor space</th><td data-i18n="s_out_v">Courtyard with pool, stone arcade, lemon and clementine trees and a vine; roof terrace</td></tr>
+          <tr><th data-i18n="s_cond">Condition</th><td data-i18n="s_cond_v">Full renovation, nearing completion</td></tr>
+          <tr><th data-i18n="s_energy">Energy rating</th><td><em class="ph" data-i18n="ph_tag">To confirm</em></td></tr>
+          <tr><th data-i18n="price">Price</th><td><em class="ph" data-i18n="price_v">Around €2.5m</em></td></tr>
+        </table>
+      </div>
+      <div class="arch" style="aspect-ratio:3/4"><img src="images/courtyard.jpg" width="1800" height="1504" loading="lazy" alt="" data-i18n-alt="c_courtyard"></div>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="wrap">
+      <div class="sec-head"><p class="label" data-i18n="nav_location">Location</p><h2>Felanitx, Mallorca</h2></div>
+      <div class="loc-grid">
+        <div class="prose">
+          <p data-i18n="loc_p1">Felanitx is a working Mallorcan town in the south-east of the island, known for its Sunday market, its vineyards and wineries, and the hilltop sanctuary of Sant Salvador that looks out over the plain to the sea.</p>
+          <p data-i18n="loc_p2">The harbour and coves of Portocolom are a short drive away, and Palma and its airport are within easy reach for year-round living.</p>
+        </div>
+        <div>
+          <ul class="dist">
+            <li><span>Portocolom</span><b>≈ 12 km</b></li>
+            <li><span data-i18n="d_airport">Palma airport</span><b>≈ 45 km</b></li>
+            <li><span>Palma</span><b>≈ 50 km</b></li>
+            <li><span data-i18n="d_beach">Nearest beaches</span><b>≈ 12 km</b></li>
+          </ul>
+          <p class="fine" data-i18n="d_fine">Distances are approximate, by road.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="sec-head"><p class="label" data-i18n="nav_contact">Viewings</p><h2 data-i18n="contact_h">Arrange a private viewing</h2></div>
+        <p class="prose" data-i18n="contact_p">Viewings are by appointment. Send an enquiry and we will be in touch to arrange a time.</p>
+        <div class="agent">
+          <div><span class="label" data-i18n="a_name">Contact</span><em class="ph" data-i18n="ph_name">Name / agency</em></div>
+          <div><span class="label" data-i18n="a_phone">Phone</span><em class="ph">+34 — — —</em></div>
+          <div><span class="label" data-i18n="a_email">Email</span><em class="ph">—@—</em></div>
+        </div>
+      </div>
+      <form class="enq" id="enq" novalidate>
+        <div class="row2">
+          <label for="f-name"><span data-i18n="l_name">Name</span><input id="f-name" name="name" autocomplete="name" required></label>
+          <label for="f-email"><span data-i18n="l_email">Email</span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <label for="f-phone"><span data-i18n="l_phone">Phone (optional)</span><input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
+        <label for="f-msg"><span data-i18n="l_msg">Message</span><textarea id="f-msg" name="message" data-i18n-ph="l_msg_ph" placeholder="I would like to arrange a viewing of Can Vaquer."></textarea></label>
+        <div class="actions" style="margin-top:.25rem"><button class="btn solid" type="submit" data-i18n="send">Send enquiry</button></div>
+        <p class="formnote" id="formnote" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">Can Vaquer</span>
+    <span data-i18n="foot">Felanitx, Mallorca · Townhouse for sale</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb"><button class="close" type="button" aria-label="Close">×</button><img alt=""><p></p></dialog>
+
+<script>
+const I18N={
+en:{menu:"Menu",fp9:"Fibre to the premises available in the street, up to 2 Gbit/s",fp10:"Cat7 cabling to multiple Wi-Fi 7 access points throughout",nav_feat:"Features",feat_label:"Features",feat_h:"What the house offers",f_floors_n:"Floors",f_done:"Completion",g_house:"The house",fh1:"8 bedrooms and 7 bathrooms",fh2:"About 700 m² built across five floors",fh3:"393 m² plot in the historic centre of Felanitx",fh4:"Full renovation, completing May 2027",g_living:"Living spaces",fl1:"Entrance hall, sitting room, TV room and study",fl2:"Kitchen with pantry, dining room and formal dining room",fl3:"Second formal dining room and kitchenette on the first floor",fl4:"Further living rooms on the first and second floors",g_bed:"Bedrooms and bathrooms",fb1:"Two main bedroom suites with dressing rooms and en-suite bathrooms",fb2:"Walk-in showers in handmade glazed tile",fb3:"Freestanding bath with a brushed bronze filler",fb4:"Guest WC on the ground floor",fb5:"Electric underfloor heating in the bathrooms",g_out:"Outdoors",fo1:"Private courtyard with a swimming pool",fo2:"Sandstone arcade with an outdoor dining area",fo3:"Lemon tree, clementine tree and a vine",fo4:"Sun terrace beside the pool",g_prac:"Systems",fp6:"Heat pump cylinders for domestic hot water",fp7:"Whole-house water filtration and softening",fp8:"Mains water storage and pressurisation system",fp1:"Two garages for parking",fp4:"Wine cellar for over 200 bottles",fp11:"Cheese cave and humidor",fo5:"Roof terrace with panoramic views",fo6:"Irrigation system fed from underground rainwater storage tanks",fp2:"Storerooms and a plant room",fp3:"Air source heat pump for heating and cooling",fp5:"Three-phase electricity with provision for electric vehicle charging up to 27 kW",g_craft:"Craft and materials",fc1:"Original timber beams and local stone walls",fc2:"Lime-plastered walls",fc5:"Handmade terracotta floor tiles by Can Benito",fc6:"Handmade stone sinks by d’Aigo Mallorca",fc3:"Wooden shutters and deep window reveals",fc4:"Brushed bronze taps and fittings",r_garage:"Garage",r_store:"Storeroom",r_plant:"Plant room",r_study:"Study",r_tv:"TV room",r_hall:"Entrance hall",r_dining:"Dining room",r_formal:"Formal dining room",r_kitchen:"Kitchen",r_pantry:"Pantry",r_wc:"WC",r_sitting:"Sitting room",r_living:"Living room",r_bed:"Bedroom",r_mainbed:"Main bedroom",r_bath:"Bathroom",r_mainbath:"Main bathroom",r_dress:"Dressing room",r_shower:"Shower room",r_stair:"Stair",r_landing:"Landing",nav_plans:"Plans",plans_label:"Floor plans",plans_h:"The layout, floor by floor",fl_lg:"Lower ground floor",fl_g:"Ground floor",fl_1:"First floor",fl_2:"Second floor",plans_note:"Indicative plans, not to scale. Room sizes are approximate and the final layout may differ.",ph_tag:"To confirm",notice:"Preview. Items with a dashed outline are placeholders to fill in before launch.",nav_house:"The house",nav_rooms:"Rooms",nav_details:"Key facts",nav_location:"Location",nav_contact:"Viewings",
+eyebrow:"For sale · Felanitx, Mallorca",lede:"A Mallorcan townhouse of eight bedrooms, restored in lime, stone and old timber around a private courtyard with a pool.",
+f_bed:"Bedrooms",f_bath:"Bathrooms",f_area:"Built area",f_pool_v:"Pool",f_pool:"In the courtyard",price:"Price",cta:"Arrange a private viewing",cta2:"See the rooms",
+alt_bedroom:"Bedroom with timber beams, a window with green shutters and sunlight on a terracotta floor",
+house_label:"The house",house_h:"Restored by hand, room by room",
+house_p1:"Can Vaquer is a traditional townhouse in Felanitx, a market town in the south-east of Mallorca. The renovation keeps what made it: tall rooms under dark timber beams, walls of local stone, deep window reveals with wooden shutters, and handmade terracotta floors laid on the diagonal.",
+house_p2:"The new work is quiet and exact. Walls are finished in lime plaster, bathrooms are lined in glazed handmade tiles and pale stone, and the taps are brushed bronze. Out in the courtyard, a sandstone arcade, a lemon tree, a clementine tree and a vine surround the new pool.",
+status:"Renovation in progress. Completion expected",ph_date:"May 2027",price_v:"Around €2.5m",
+m1:"Marès sandstone",m1s:"Arches and arcade around the courtyard",m2:"Lime plaster",m2s:"Breathable, hand-trowelled walls",m3:"Timber beams",m3s:"Original ceilings, kept and restored",m4:"Terracotta floors",m4s:"Handmade tiles by Can Benito, laid on the diagonal",m5:"Glazed handmade tiles",m5s:"Showers and bathroom walls",m6:"Brushed bronze",m6s:"Taps, shower sets and bath filler",
+rooms_label:"Rooms and details",rooms_h:"A walk through the house",
+c_courtyard:"Through the stone arch to the courtyard",c_stair:"The stair to the upper floor",c_beams:"Timber beams over a stone wall",c_facade:"The house seen from the courtyard",c_shower:"Walk-in shower in glazed tile",c_doorway:"Lime plaster and exposed stone",c_bathwindow:"Bathroom under a stone lintel",c_spout:"Brushed bronze bath filler",c_bedroom:"Bedroom with green shutters",
+disclaimer:"Photographs taken during the final stage of renovation. Finished photography will follow.",
+details_label:"Key facts",details_h:"At a glance",s_plot:"Plot",s_floors:"Floors",s_out:"Outdoor space",s_out_v:"Courtyard with pool, stone arcade, lemon and clementine trees and a vine; roof terrace",s_cond:"Condition",s_cond_v:"Full renovation, nearing completion",s_energy:"Energy rating",
+loc_p1:"Felanitx is a working Mallorcan town in the south-east of the island, known for its Sunday market, its vineyards and wineries, and the hilltop sanctuary of Sant Salvador that looks out over the plain to the sea.",
+loc_p2:"The harbour and coves of Portocolom are a short drive away, and Palma and its airport are within easy reach for year-round living.",
+d_airport:"Palma airport",d_beach:"Nearest beaches",d_fine:"Distances are approximate, by road.",
+contact_h:"Arrange a private viewing",contact_p:"Viewings are by appointment. Send an enquiry and we will be in touch to arrange a time.",a_name:"Contact",ph_name:"Name / agency",a_phone:"Phone",a_email:"Email",
+l_name:"Name",l_email:"Email",l_phone:"Phone (optional)",l_msg:"Message",l_msg_ph:"I would like to arrange a viewing of Can Vaquer.",send:"Send enquiry",
+err:"Please add your name and a valid email address.",sent:"Thank you. This preview form is not connected yet, so your message was not sent.",foot:"Felanitx, Mallorca · Townhouse for sale"},
+es:{menu:"Menú",fp9:"Fibra óptica disponible en la calle, hasta 2 Gbit/s",fp10:"Cableado Cat7 a varios puntos de acceso Wi-Fi 7 en toda la casa",nav_feat:"Características",feat_label:"Características",feat_h:"Lo que ofrece la casa",f_floors_n:"Plantas",f_done:"Finalización",g_house:"La casa",fh1:"8 dormitorios y 7 baños",fh2:"Unos 700 m² construidos en cinco plantas",fh3:"Parcela de 393 m² en el centro histórico de Felanitx",fh4:"Reforma integral, finalización en mayo de 2027",g_living:"Zonas de día",fl1:"Vestíbulo, sala de estar, sala de televisión y despacho",fl2:"Cocina con despensa, comedor y comedor formal",fl3:"Segundo comedor formal y office en la primera planta",fl4:"Salones adicionales en la primera y la segunda planta",g_bed:"Dormitorios y baños",fb1:"Dos suites principales con vestidor y baño en suite",fb2:"Duchas abiertas con azulejo artesanal esmaltado",fb3:"Bañera exenta con caño de bronce cepillado",fb4:"Aseo de cortesía en la planta baja",fb5:"Suelo radiante eléctrico en los baños",g_out:"Exterior",fo1:"Patio privado con piscina",fo2:"Arcada de marés con comedor exterior",fo3:"Limonero, clementino y parra",fo4:"Solárium junto a la piscina",g_prac:"Instalaciones",fp6:"Acumuladores con bomba de calor para agua caliente sanitaria",fp7:"Filtración y descalcificación de agua para toda la casa",fp8:"Depósito de agua de red con grupo de presión",fp1:"Dos garajes",fp4:"Bodega con capacidad para más de 200 botellas",fp11:"Cava de quesos y humidor",fo5:"Terraza en la azotea con vistas panorámicas",fo6:"Sistema de riego alimentado por depósitos subterráneos de agua de lluvia",fp2:"Trasteros y sala de máquinas",fp3:"Aerotermia para calefacción y refrigeración",fp5:"Electricidad trifásica con preinstalación para carga de vehículos eléctricos de hasta 27 kW",g_craft:"Oficio y materiales",fc1:"Vigas de madera originales y muros de piedra local",fc2:"Paredes de mortero de cal",fc5:"Suelos de terracota artesanal de Can Benito",fc6:"Lavabos de piedra artesanales de d’Aigo Mallorca",fc3:"Persianas de madera y ventanas profundas",fc4:"Grifería y herrajes de bronce cepillado",r_garage:"Garaje",r_store:"Trastero",r_plant:"Sala de máquinas",r_study:"Despacho",r_tv:"Sala de televisión",r_hall:"Vestíbulo",r_dining:"Comedor",r_formal:"Comedor formal",r_kitchen:"Cocina",r_pantry:"Despensa",r_wc:"Aseo",r_sitting:"Sala de estar",r_living:"Salón",r_bed:"Dormitorio",r_mainbed:"Dormitorio principal",r_bath:"Baño",r_mainbath:"Baño principal",r_dress:"Vestidor",r_shower:"Cuarto de ducha",r_stair:"Escalera",r_landing:"Distribuidor",nav_plans:"Planos",plans_label:"Planos",plans_h:"La distribución, planta a planta",fl_lg:"Planta sótano",fl_g:"Planta baja",fl_1:"Primera planta",fl_2:"Segunda planta",plans_note:"Planos orientativos, sin escala. Las superficies son aproximadas y la distribución final puede variar.",ph_tag:"A confirmar",notice:"Vista previa. Los elementos con borde discontinuo son datos pendientes de completar antes de publicar.",nav_house:"La casa",nav_rooms:"Estancias",nav_details:"Datos clave",nav_location:"Ubicación",nav_contact:"Visitas",
+eyebrow:"En venta · Felanitx, Mallorca",lede:"Una casa de pueblo mallorquina de ocho dormitorios, restaurada con cal, piedra y madera antigua en torno a un patio privado con piscina.",
+f_bed:"Dormitorios",f_bath:"Baños",f_area:"Superficie construida",f_pool_v:"Piscina",f_pool:"En el patio",price:"Precio",cta:"Concertar una visita privada",cta2:"Ver las estancias",
+alt_bedroom:"Dormitorio con vigas de madera, ventana con persianas verdes y luz sobre un suelo de terracota",
+house_label:"La casa",house_h:"Restaurada a mano, estancia a estancia",
+house_p1:"Can Vaquer es una casa de pueblo tradicional en Felanitx, una villa de mercado del sureste de Mallorca. La reforma conserva su esencia: estancias altas bajo vigas de madera oscura, muros de piedra local, ventanas profundas con persianas de madera y suelos de terracota artesanal colocados en diagonal.",
+house_p2:"La obra nueva es serena y precisa. Las paredes están acabadas con mortero de cal, los baños revestidos de azulejo artesanal esmaltado y piedra clara, y la grifería es de bronce cepillado. En el patio, una arcada de marés, un limonero, un clementino y una parra rodean la nueva piscina.",
+status:"Reforma en curso. Finalización prevista",ph_date:"mayo de 2027",price_v:"En torno a 2,5 M€",
+m1:"Piedra de marès",m1s:"Arcos y arcada en torno al patio",m2:"Mortero de cal",m2s:"Paredes transpirables, acabadas a llana",m3:"Vigas de madera",m3s:"Techos originales, conservados y restaurados",m4:"Suelos de terracota",m4s:"Baldosa artesanal de Can Benito, colocada en diagonal",m5:"Azulejo artesanal esmaltado",m5s:"Duchas y paredes de los baños",m6:"Bronce cepillado",m6s:"Grifería, duchas y caño de bañera",
+rooms_label:"Estancias y detalles",rooms_h:"Un paseo por la casa",
+c_courtyard:"Del arco de piedra al patio",c_stair:"La escalera a la planta superior",c_beams:"Vigas de madera sobre un muro de piedra",c_facade:"La casa vista desde el patio",c_shower:"Ducha abierta de azulejo esmaltado",c_doorway:"Cal y piedra vista",c_bathwindow:"Baño bajo un dintel de piedra",c_spout:"Caño de bañera de bronce cepillado",c_bedroom:"Dormitorio con persianas verdes",
+disclaimer:"Fotografías tomadas en la fase final de la reforma. Próximamente, fotografías de la casa terminada.",
+details_label:"Datos clave",details_h:"De un vistazo",s_plot:"Parcela",s_floors:"Plantas",s_out:"Exterior",s_out_v:"Patio con piscina, arcada de piedra, limonero, clementino y parra; terraza en la azotea",s_cond:"Estado",s_cond_v:"Reforma integral, a punto de terminar",s_energy:"Certificado energético",
+loc_p1:"Felanitx es una villa mallorquina con vida propia en el sureste de la isla, conocida por su mercado de los domingos, sus viñedos y bodegas, y el santuario de Sant Salvador, que desde lo alto del monte domina la llanura hasta el mar.",
+loc_p2:"El puerto y las calas de Portocolom quedan a pocos minutos en coche, y Palma y su aeropuerto están bien comunicados para vivir todo el año.",
+d_airport:"Aeropuerto de Palma",d_beach:"Playas más cercanas",d_fine:"Distancias aproximadas por carretera.",
+contact_h:"Concertar una visita privada",contact_p:"Las visitas son con cita previa. Envíenos su consulta y nos pondremos en contacto para acordar una hora.",a_name:"Contacto",ph_name:"Nombre / agencia",a_phone:"Teléfono",a_email:"Correo electrónico",
+l_name:"Nombre",l_email:"Correo electrónico",l_phone:"Teléfono (opcional)",l_msg:"Mensaje",l_msg_ph:"Me gustaría concertar una visita a Can Vaquer.",send:"Enviar consulta",
+err:"Indique su nombre y un correo electrónico válido.",sent:"Gracias. Este formulario de vista previa aún no está conectado, así que su mensaje no se ha enviado.",foot:"Felanitx, Mallorca · Casa en venta"},
+ca:{menu:"Menú",fp9:"Fibra òptica disponible al carrer, fins a 2 Gbit/s",fp10:"Cablejat Cat7 a diversos punts d’accés Wi-Fi 7 a tota la casa",nav_feat:"Característiques",feat_label:"Característiques",feat_h:"El que ofereix la casa",f_floors_n:"Plantes",f_done:"Finalització",g_house:"La casa",fh1:"8 dormitoris i 7 banys",fh2:"Uns 700 m² construïts en cinc plantes",fh3:"Parcel·la de 393 m² al centre històric de Felanitx",fh4:"Reforma integral, finalització el maig de 2027",g_living:"Zones de dia",fl1:"Vestíbul, sala d’estar, sala de televisió i despatx",fl2:"Cuina amb rebost, menjador i menjador formal",fl3:"Segon menjador formal i office a la primera planta",fl4:"Salons addicionals a la primera i la segona planta",g_bed:"Dormitoris i banys",fb1:"Dues suites principals amb vestidor i bany en suite",fb2:"Dutxes obertes de rajola artesanal esmaltada",fb3:"Banyera exempta amb broc de bronze raspallat",fb4:"Lavabo de cortesia a la planta baixa",fb5:"Terra radiant elèctric als banys",g_out:"Exterior",fo1:"Pati privat amb piscina",fo2:"Arcada de marès amb menjador exterior",fo3:"Llimoner, clementiner i parra",fo4:"Solàrium devora la piscina",g_prac:"Instal·lacions",fp6:"Acumuladors amb bomba de calor per a aigua calenta sanitària",fp7:"Filtració i descalcificació d’aigua per a tota la casa",fp8:"Dipòsit d’aigua de xarxa amb grup de pressió",fp1:"Dos garatges",fp4:"Celler amb capacitat per a més de 200 botelles",fp11:"Cava de formatges i humidor",fo5:"Terrat amb vistes panoràmiques",fo6:"Sistema de reg alimentat per dipòsits soterrats d’aigua de pluja",fp2:"Trasters i sala de màquines",fp3:"Aerotèrmia per a calefacció i refrigeració",fp5:"Electricitat trifàsica amb preinstal·lació per a càrrega de vehicles elèctrics de fins a 27 kW",g_craft:"Ofici i materials",fc1:"Bigues de fusta originals i parets de pedra del país",fc2:"Parets de morter de calç",fc5:"Trespols de terracota artesanal de Can Benito",fc6:"Piques de pedra artesanals de d’Aigo Mallorca",fc3:"Persianes de fusta i finestres fondes",fc4:"Aixetes i accessoris de bronze raspallat",r_garage:"Garatge",r_store:"Traster",r_plant:"Sala de màquines",r_study:"Despatx",r_tv:"Sala de televisió",r_hall:"Vestíbul",r_dining:"Menjador",r_formal:"Menjador formal",r_kitchen:"Cuina",r_pantry:"Rebost",r_wc:"Lavabo",r_sitting:"Sala d’estar",r_living:"Saló",r_bed:"Dormitori",r_mainbed:"Dormitori principal",r_bath:"Bany",r_mainbath:"Bany principal",r_dress:"Vestidor",r_shower:"Cambra de dutxa",r_stair:"Escala",r_landing:"Distribuïdor",nav_plans:"Plànols",plans_label:"Plànols",plans_h:"La distribució, planta a planta",fl_lg:"Planta soterrani",fl_g:"Planta baixa",fl_1:"Primera planta",fl_2:"Segona planta",plans_note:"Plànols orientatius, sense escala. Les superfícies són aproximades i la distribució final pot variar.",ph_tag:"Per confirmar",notice:"Vista prèvia. Els elements amb vora discontínua són dades pendents d’omplir abans de publicar.",nav_house:"La casa",nav_rooms:"Estances",nav_details:"Dades clau",nav_location:"Situació",nav_contact:"Visites",
+eyebrow:"En venda · Felanitx, Mallorca",lede:"Una casa de poble mallorquina de vuit dormitoris, restaurada amb calç, pedra i fusta antiga al voltant d’un pati privat amb piscina.",
+f_bed:"Dormitoris",f_bath:"Banys",f_area:"Superfície construïda",f_pool_v:"Piscina",f_pool:"Al pati",price:"Preu",cta:"Concertar una visita privada",cta2:"Veure les estances",
+alt_bedroom:"Dormitori amb bigues de fusta, finestra amb persianes verdes i llum sobre un trespol de terracota",
+house_label:"La casa",house_h:"Restaurada a mà, estança a estança",
+house_p1:"Can Vaquer és una casa de poble tradicional a Felanitx, una vila de mercat del sud-est de Mallorca. La reforma en conserva l’essència: estances altes sota bigues de fusta fosca, parets de pedra del país, finestres fondes amb persianes de fusta i trespols de terracota artesanal col·locats en diagonal.",
+house_p2:"L’obra nova és serena i precisa. Les parets estan acabades amb morter de calç, els banys revestits de rajola artesanal esmaltada i pedra clara, i les aixetes són de bronze raspallat. Al pati, una arcada de marès, un llimoner, un clementiner i una parra envolten la nova piscina.",
+status:"Reforma en curs. Finalització prevista",ph_date:"maig de 2027",price_v:"Al voltant de 2,5 M€",
+m1:"Pedra de marès",m1s:"Arcs i arcada al voltant del pati",m2:"Morter de calç",m2s:"Parets transpirables, acabades a mà",m3:"Bigues de fusta",m3s:"Sostres originals, conservats i restaurats",m4:"Trespols de terracota",m4s:"Rajola artesanal de Can Benito, col·locada en diagonal",m5:"Rajola artesanal esmaltada",m5s:"Dutxes i parets dels banys",m6:"Bronze raspallat",m6s:"Aixetes, dutxes i broc de banyera",
+rooms_label:"Estances i detalls",rooms_h:"Un passeig per la casa",
+c_courtyard:"De l’arc de pedra al pati",c_stair:"L’escala al pis de dalt",c_beams:"Bigues de fusta sobre una paret de pedra",c_facade:"La casa vista des del pati",c_shower:"Dutxa oberta de rajola esmaltada",c_doorway:"Calç i pedra vista",c_bathwindow:"Bany sota una llinda de pedra",c_spout:"Broc de banyera de bronze raspallat",c_bedroom:"Dormitori amb persianes verdes",
+disclaimer:"Fotografies preses en la fase final de la reforma. Aviat hi haurà fotografies de la casa acabada.",
+details_label:"Dades clau",details_h:"D’un cop d’ull",s_plot:"Parcel·la",s_floors:"Plantes",s_out:"Exterior",s_out_v:"Pati amb piscina, arcada de pedra, llimoner, clementiner i parra; terrat",s_cond:"Estat",s_cond_v:"Reforma integral, a punt d’acabar",s_energy:"Certificat energètic",
+loc_p1:"Felanitx és una vila mallorquina amb vida pròpia al sud-est de l’illa, coneguda pel seu mercat dels diumenges, les vinyes i els cellers, i el santuari de Sant Salvador, que des de dalt del puig domina el pla fins a la mar.",
+loc_p2:"El port i les cales de Portocolom són a pocs minuts en cotxe, i Palma i el seu aeroport queden ben comunicats per viure-hi tot l’any.",
+d_airport:"Aeroport de Palma",d_beach:"Platges més properes",d_fine:"Distàncies aproximades per carretera.",
+contact_h:"Concertar una visita privada",contact_p:"Les visites són amb cita prèvia. Enviau-nos la vostra consulta i us contactarem per acordar una hora.",a_name:"Contacte",ph_name:"Nom / agència",a_phone:"Telèfon",a_email:"Correu electrònic",
+l_name:"Nom",l_email:"Correu electrònic",l_phone:"Telèfon (opcional)",l_msg:"Missatge",l_msg_ph:"M’agradaria concertar una visita a Can Vaquer.",send:"Enviar la consulta",
+err:"Indicau el vostre nom i un correu electrònic vàlid.",sent:"Gràcies. Aquest formulari de vista prèvia encara no està connectat, així que el missatge no s’ha enviat.",foot:"Felanitx, Mallorca · Casa en venda"},
+de:{menu:"Menü",fp9:"Glasfaseranschluss in der Straße verfügbar, bis 2 Gbit/s",fp10:"Cat7-Verkabelung zu mehreren Wi-Fi-7-Access-Points im ganzen Haus",nav_feat:"Ausstattung",feat_label:"Ausstattung",feat_h:"Was das Haus bietet",f_floors_n:"Etagen",f_done:"Fertigstellung",g_house:"Das Haus",fh1:"8 Schlafzimmer und 7 Bäder",fh2:"Rund 700 m² Wohnfläche auf fünf Etagen",fh3:"Grundstück von 393 m² in der historischen Altstadt von Felanitx",fh4:"Kernsanierung, Fertigstellung im Mai 2027",g_living:"Wohnbereiche",fl1:"Eingangshalle, Wohnzimmer, Fernsehzimmer und Arbeitszimmer",fl2:"Küche mit Speisekammer, Esszimmer und formelles Esszimmer",fl3:"Zweites formelles Esszimmer und Teeküche im 1. Obergeschoss",fl4:"Weitere Salons im 1. und 2. Obergeschoss",g_bed:"Schlafzimmer und Bäder",fb1:"Zwei Hauptschlafzimmer mit Ankleide und eigenem Bad",fb2:"Begehbare Duschen mit glasierten Handmachfliesen",fb3:"Freistehende Badewanne mit Einlauf aus gebürsteter Bronze",fb4:"Gäste-WC im Erdgeschoss",fb5:"Elektrische Fußbodenheizung in den Bädern",g_out:"Außenbereich",fo1:"Privater Innenhof mit Pool",fo2:"Sandsteinarkade mit Essplatz im Freien",fo3:"Zitronenbaum, Clementinenbaum und Weinrebe",fo4:"Sonnenterrasse am Pool",g_prac:"Haustechnik",fp6:"Warmwasserspeicher mit Wärmepumpe",fp7:"Wasserfilterung und -enthärtung für das ganze Haus",fp8:"Trinkwasserspeicher mit Druckerhöhungsanlage",fp1:"Zwei Garagen",fp4:"Weinkeller für über 200 Flaschen",fp11:"Käsekeller und Humidor",fo5:"Dachterrasse mit Panoramablick",fo6:"Bewässerungsanlage, gespeist aus unterirdischen Regenwasserzisternen",fp2:"Abstellräume und Technikraum",fp3:"Luft-Wärmepumpe zum Heizen und Kühlen",fp5:"Drehstromanschluss mit Vorbereitung für E-Auto-Laden bis 27 kW",g_craft:"Handwerk und Materialien",fc1:"Originale Holzbalken und Wände aus heimischem Naturstein",fc2:"Wände mit Kalkputz",fc5:"Handgefertigte Terrakottafliesen von Can Benito",fc6:"Handgefertigte Steinwaschbecken von d’Aigo Mallorca",fc3:"Holzläden und tiefe Fensterlaibungen",fc4:"Armaturen und Beschläge aus gebürsteter Bronze",r_garage:"Garage",r_store:"Abstellraum",r_plant:"Technikraum",r_study:"Arbeitszimmer",r_tv:"Fernsehzimmer",r_hall:"Eingangshalle",r_dining:"Esszimmer",r_formal:"Formelles Esszimmer",r_kitchen:"Küche",r_pantry:"Speisekammer",r_wc:"Gäste-WC",r_sitting:"Wohnzimmer",r_living:"Salon",r_bed:"Schlafzimmer",r_mainbed:"Hauptschlafzimmer",r_bath:"Bad",r_mainbath:"Hauptbad",r_dress:"Ankleide",r_shower:"Duschbad",r_stair:"Treppe",r_landing:"Flur",nav_plans:"Grundrisse",plans_label:"Grundrisse",plans_h:"Der Grundriss, Etage für Etage",fl_lg:"Untergeschoss",fl_g:"Erdgeschoss",fl_1:"1. Obergeschoss",fl_2:"2. Obergeschoss",plans_note:"Unverbindliche Grundrisse, nicht maßstäblich. Flächen sind ungefähre Angaben, die endgültige Aufteilung kann abweichen.",ph_tag:"Noch offen",notice:"Vorschau. Gestrichelt umrandete Angaben sind Platzhalter, die vor dem Start ergänzt werden.",nav_house:"Das Haus",nav_rooms:"Räume",nav_details:"Eckdaten",nav_location:"Lage",nav_contact:"Besichtigung",
+eyebrow:"Zu verkaufen · Felanitx, Mallorca",lede:"Ein mallorquinisches Stadthaus mit acht Schlafzimmern, restauriert mit Kalk, Naturstein und altem Holz, rund um einen privaten Innenhof mit Pool.",
+f_bed:"Schlafzimmer",f_bath:"Badezimmer",f_area:"Wohnfläche",f_pool_v:"Pool",f_pool:"Im Innenhof",price:"Preis",cta:"Private Besichtigung vereinbaren",cta2:"Räume ansehen",
+alt_bedroom:"Schlafzimmer mit Holzbalken, Fenster mit grünen Läden und Sonnenlicht auf Terrakottaboden",
+house_label:"Das Haus",house_h:"Von Hand restauriert, Raum für Raum",
+house_p1:"Can Vaquer ist ein traditionelles Stadthaus in Felanitx, einer Marktstadt im Südosten Mallorcas. Die Renovierung bewahrt, was das Haus ausmacht: hohe Räume unter dunklen Holzbalken, Wände aus heimischem Naturstein, tiefe Fensterlaibungen mit Holzläden und handgefertigte Terrakottaböden, diagonal verlegt.",
+house_p2:"Das Neue ist zurückhaltend und präzise. Die Wände sind mit Kalkputz verputzt, die Bäder mit glasierten Handmachfliesen und hellem Stein ausgekleidet, die Armaturen aus gebürsteter Bronze. Im Innenhof umgeben eine Sandsteinarkade, ein Zitronenbaum, ein Clementinenbaum und eine Weinrebe den neuen Pool.",
+status:"Renovierung läuft. Fertigstellung voraussichtlich",ph_date:"Mai 2027",price_v:"Ca. 2,5 Mio. €",
+m1:"Marès-Sandstein",m1s:"Bögen und Arkade am Innenhof",m2:"Kalkputz",m2s:"Atmungsaktive, von Hand verputzte Wände",m3:"Holzbalken",m3s:"Originale Decken, erhalten und restauriert",m4:"Terrakottaböden",m4s:"Handgefertigte Fliesen von Can Benito, diagonal verlegt",m5:"Glasierte Handmachfliesen",m5s:"Duschen und Badwände",m6:"Gebürstete Bronze",m6s:"Armaturen, Duschen und Wanneneinlauf",
+rooms_label:"Räume und Details",rooms_h:"Ein Rundgang durch das Haus",
+c_courtyard:"Durch den Steinbogen in den Innenhof",c_stair:"Die Treppe ins Obergeschoss",c_beams:"Holzbalken über einer Natursteinwand",c_facade:"Das Haus vom Innenhof aus",c_shower:"Begehbare Dusche mit glasierten Fliesen",c_doorway:"Kalkputz und sichtbarer Naturstein",c_bathwindow:"Bad unter einem Steinsturz",c_spout:"Wanneneinlauf aus gebürsteter Bronze",c_bedroom:"Schlafzimmer mit grünen Fensterläden",
+disclaimer:"Aufnahmen aus der letzten Bauphase. Fotos des fertigen Hauses folgen.",
+details_label:"Eckdaten",details_h:"Auf einen Blick",s_plot:"Grundstück",s_floors:"Etagen",s_out:"Außenbereich",s_out_v:"Innenhof mit Pool, Steinarkade, Zitronen- und Clementinenbaum und Weinrebe; Dachterrasse",s_cond:"Zustand",s_cond_v:"Kernsaniert, kurz vor Fertigstellung",s_energy:"Energieausweis",
+loc_p1:"Felanitx ist eine lebendige mallorquinische Kleinstadt im Südosten der Insel, bekannt für ihren Sonntagsmarkt, ihre Weinberge und Bodegas und das Kloster Sant Salvador, das vom Berg aus über die Ebene bis zum Meer blickt.",
+loc_p2:"Hafen und Buchten von Portocolom sind in wenigen Autominuten erreichbar, Palma und der Flughafen gut angebunden, für ein Leben das ganze Jahr über.",
+d_airport:"Flughafen Palma",d_beach:"Nächste Strände",d_fine:"Entfernungen ungefähr, auf der Straße.",
+contact_h:"Private Besichtigung vereinbaren",contact_p:"Besichtigungen nach Vereinbarung. Senden Sie uns Ihre Anfrage, wir melden uns für einen Termin.",a_name:"Kontakt",ph_name:"Name / Makler",a_phone:"Telefon",a_email:"E-Mail",
+l_name:"Name",l_email:"E-Mail",l_phone:"Telefon (optional)",l_msg:"Nachricht",l_msg_ph:"Ich möchte gerne eine Besichtigung von Can Vaquer vereinbaren.",send:"Anfrage senden",
+err:"Bitte geben Sie Ihren Namen und eine gültige E-Mail-Adresse an.",sent:"Vielen Dank. Dieses Vorschau-Formular ist noch nicht verbunden, Ihre Nachricht wurde daher nicht gesendet.",foot:"Felanitx, Mallorca · Stadthaus zu verkaufen"}
+};
+const LANGS=["en","es","ca","de"];
+let lang="en";
+function setLang(l){
+  if(!I18N[l]) l="en"; lang=l; const d=I18N[l];
+  document.documentElement.lang=l;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n; if(d[k]!=null) el.textContent=d[k];});
+  document.querySelectorAll("[data-i18n-alt]").forEach(el=>{const k=el.dataset.i18nAlt; if(d[k]!=null) el.alt=d[k];});
+  document.querySelectorAll("[data-i18n-aria]").forEach(el=>{const k=el.dataset.i18nAria; if(d[k]!=null) el.setAttribute("aria-label",d[k]);});
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{const k=el.dataset.i18nPh; if(d[k]!=null) el.placeholder=d[k];});
+  const nf=new Intl.NumberFormat(l==="en"?"en-GB":l,{minimumFractionDigits:1,maximumFractionDigits:1});
+  document.querySelectorAll("[data-area]").forEach(el=>{el.textContent=nf.format(+el.dataset.area)+"\u00a0m²";});
+  document.querySelectorAll(".langs button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===l)));
+  const note=document.getElementById("formnote"); if(note) note.textContent="";
+  try{localStorage.setItem("cv-lang",l)}catch(e){}
+}
+document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>{setLang(b.dataset.lang); try{history.replaceState(null,"","#"+b.dataset.lang)}catch(e){}}));
+(function init(){
+  const h=(location.hash||"").slice(1).toLowerCase();
+  let saved=null; try{saved=localStorage.getItem("cv-lang")}catch(e){}
+  const nav=(navigator.language||"en").slice(0,2).toLowerCase();
+  setLang(LANGS.includes(h)?h:LANGS.includes(saved)?saved:LANGS.includes(nav)?nav:"en");
+})();
+
+/* mobile menu */
+const menuBtn=document.getElementById("menu-btn"), mainNav=document.getElementById("main-nav");
+function setMenu(open){mainNav.classList.toggle("open",open);menuBtn.setAttribute("aria-expanded",String(open));}
+menuBtn.addEventListener("click",()=>setMenu(!mainNav.classList.contains("open")));
+mainNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&mainNav.classList.contains("open")){setMenu(false);menuBtn.focus();}});
+document.addEventListener("click",e=>{if(mainNav.classList.contains("open")&&!mainNav.contains(e.target)&&!menuBtn.contains(e.target))setMenu(false);});
+
+/* lightbox */
+const lb=document.getElementById("lb"), lbImg=lb.querySelector("img"), lbCap=lb.querySelector("p");
+document.querySelectorAll(".gallery button").forEach(btn=>btn.addEventListener("click",()=>{
+  const img=btn.querySelector("img"); lbImg.src=img.src; lbImg.alt=img.alt; lbCap.textContent=img.alt;
+  if(lb.showModal) lb.showModal();
+}));
+lb.querySelector(".close").addEventListener("click",()=>lb.close());
+lb.addEventListener("click",e=>{if(e.target===lb) lb.close();});
+
+
+/* floor plan tabs */
+const tabs=[...document.querySelectorAll('.plan-tabs [role=tab]')];
+function showFloor(t){tabs.forEach(b=>{const on=b===t;b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});}
+tabs.forEach((b,i)=>{b.tabIndex=b.getAttribute('aria-selected')==='true'?0:-1;b.addEventListener('click',()=>showFloor(b));
+  b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];showFloor(n);n.focus();}});});
+
+/* enquiry form: not connected to a backend yet */
+document.getElementById("enq").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=e.target, note=document.getElementById("formnote"), d=I18N[lang];
+  const ok=f.name.value.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim());
+  note.textContent=ok?d.sent:d.err;
+});
+</script>
+
+</body>
+</html>
