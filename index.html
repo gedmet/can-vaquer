@@ -14,7 +14,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Marcellus&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
 /* Layout: a walk through the house. Arched openings echo the courtyard arcade; lime-plaster ground, oak-beam ink, shutter-green accent. */
 :root{
@@ -185,12 +185,12 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 .plan-tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--plaster)}
 .plan-panel{display:grid;gap:2rem}
 @media (min-width:960px){.plan-panel{grid-template-columns:minmax(0,1fr) 22rem;gap:3.5rem;align-items:start}}
-.plan-sheet{margin:0;background:#F3EEE6;border:1px solid var(--rule);padding:clamp(10px,3vw,32px);border-radius:2px}
+.plan-sheet{margin:0;background:#F2EBDC;border:1px solid #221B16;outline:1px solid #221B16;outline-offset:-6px;padding:clamp(14px,3.4vw,38px);border-radius:0;box-shadow:inset 0 0 60px rgba(120,95,60,.12)}
 .plan-art{position:relative;max-width:100%;container-type:inline-size;margin-inline:auto;max-height:80vh}
 .plan-art img{display:block;width:100%;height:100%}
-.room{position:absolute;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;text-align:center;line-height:1.15;pointer-events:none;color:#4E3B2E;white-space:nowrap}
-.room b{font-family:var(--display);font-weight:400;font-size:clamp(9px,1.7cqi,15px);background:rgba(243,238,230,.85);padding:0 .25em;border-radius:2px}
-.room i{font-style:normal;font-size:clamp(8px,1.3cqi,12px);color:#8A7461;font-variant-numeric:tabular-nums}
+.room{position:absolute;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;text-align:center;line-height:1.15;pointer-events:none;color:#221B16;white-space:nowrap}
+.room b{font-family:"IM Fell English",Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(10px,1.9cqi,17px);background:rgba(242,235,220,.88);padding:0 .3em;border-radius:2px}
+.room i{font-family:"IM Fell English",Georgia,serif;font-style:normal;font-size:clamp(8px,1.4cqi,13px);color:#4A3D33;background:rgba(242,235,220,.88);padding:0 .3em}
 @container (min-width:520px){.room{display:flex}}
 .room-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr}
 .room-list li{display:grid;grid-template-columns:minmax(0,1fr) 6.5rem 5.5rem;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule);font-size:.9375rem}
