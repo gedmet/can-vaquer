@@ -185,12 +185,14 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 .plan-tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--plaster)}
 .plan-panel{display:grid;gap:2rem}
 @media (min-width:960px){.plan-panel{grid-template-columns:minmax(0,1fr) 22rem;gap:3.5rem;align-items:start}}
-.plan-sheet{margin:0;background:#FAF9F5;border:1px solid var(--rule);padding:clamp(10px,3vw,32px);border-radius:2px}
+.plan-sheet{margin:0;background:none;padding:0}
 .plan-art{position:relative;max-width:100%;container-type:inline-size;margin-inline:auto;max-height:80vh}
 .plan-art img{display:block;width:100%;height:100%}
-.room{position:absolute;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;text-align:center;line-height:1.15;pointer-events:none;color:#2A2A28;white-space:nowrap}
-.room b{font-family:var(--display);font-weight:400;font-size:clamp(9px,1.7cqi,15px);background:rgba(250,249,245,.88);padding:0 .25em;border-radius:2px}
-.room i{font-style:normal;font-size:clamp(8px,1.3cqi,12px);color:#7A7A76;font-variant-numeric:tabular-nums}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .plan-art img{filter:invert(1) hue-rotate(180deg) brightness(.92)}}
+:root[data-theme="dark"] .plan-art img{filter:invert(1) hue-rotate(180deg) brightness(.92)}
+.room{position:absolute;transform:translate(-50%,-50%);display:none;flex-direction:column;align-items:center;text-align:center;line-height:1.15;pointer-events:none;color:var(--ink);white-space:nowrap}
+.room b{font-family:var(--display);font-weight:400;font-size:clamp(9px,1.7cqi,15px);background:color-mix(in srgb,var(--plaster) 88%,transparent);padding:0 .25em;border-radius:2px}
+.room i{font-style:normal;font-size:clamp(8px,1.3cqi,12px);color:var(--ink-soft);font-variant-numeric:tabular-nums}
 @container (min-width:520px){.room{display:flex}}
 .room-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr}
 .room-list li{display:grid;grid-template-columns:minmax(0,1fr) 6.5rem 5.5rem;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule);font-size:.9375rem}
