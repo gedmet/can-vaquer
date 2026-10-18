@@ -139,7 +139,7 @@ section > .wrap{padding-block:4.5rem}
 .film.no-video .film-v{animation:film-in 2.4s ease both,drift 26s ease-in-out infinite alternate}
 .film-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,17,14,.62) 0%,rgba(20,17,14,.12) 45%,rgba(20,17,14,.22) 100%);pointer-events:none}
 .film-text{position:absolute;left:0;right:0;bottom:clamp(4.5rem,13vh,8rem);text-align:center;padding-inline:16px;animation:film-up 1.6s .6s cubic-bezier(.2,.7,.2,1) both}
-.film-place{margin:0 0 .6rem;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;opacity:.9}
+.film-place{margin:.9rem 0 0;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;opacity:.9}
 .film-title{margin:0;font-family:var(--title);font-weight:400;font-size:clamp(2.24rem,7.2vw,5.6rem);line-height:1;letter-spacing:.01em}
 .film-down{position:absolute;left:50%;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:grid;place-items:center;width:44px;height:44px;border-radius:999px;color:inherit;animation:nudge 2.4s 2.4s ease-in-out infinite}
 .film-toggle{position:absolute;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));display:grid;place-items:center;width:44px;height:44px;border-radius:999px;border:1px solid rgba(244,239,231,.45);background:rgba(20,17,14,.3);color:inherit;cursor:pointer}
@@ -324,8 +324,8 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
   </video>
   <div class="film-shade"></div>
   <div class="film-text">
-    <p class="film-place">Felanitx · Mallorca</p>
     <p class="film-title">Can Vaquer</p>
+    <p class="film-place">Felanitx · Mallorca</p>
   </div>
   <button class="film-toggle" type="button" aria-label="Pause video" data-i18n-aria="film_pause"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/><path class="i-play" d="M8 5l11 7-11 7z" fill="currentColor"/></svg></button>
   <a class="film-down" href="#top" aria-label="Scroll to the house" data-i18n-aria="film_down"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
