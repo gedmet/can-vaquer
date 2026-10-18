@@ -209,8 +209,10 @@ dialog.lb .lb-cap{text-align:center;font-size:.9rem;margin:0;padding:0 16px .6re
 @media (min-width:1040px){.lh-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .lh-grid a{display:flex;flex-direction:column;gap:.3rem;text-decoration:none;color:inherit}
 .lh-img{display:grid;place-items:center;aspect-ratio:4/3;background:var(--plaster-2);border-radius:2px;overflow:hidden;margin-bottom:.45rem}
-.lh-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.lh-img{position:relative}
+.lh-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
 .lh-grid a:hover .lh-img img{transform:scale(1.03)}
+.lh-img[data-photo$="almunia.jpg"] img{object-position:50% 75%}
 .lh-cat{font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mares)}
 .lh-grid b{font-family:var(--display);font-weight:400;font-size:1.15rem;line-height:1.2}
 .lh-grid a:hover b{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
@@ -854,7 +856,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&mainNav.classList.c
 document.addEventListener("click",e=>{if(mainNav.classList.contains("open")&&!mainNav.contains(e.target)&&!menuBtn.contains(e.target))setMenu(false);});
 
 /* local highlights: swap in a photo when one exists */
-document.querySelectorAll(".lh-img[data-photo]").forEach(box=>{const im=new Image();im.alt="";im.loading="lazy";im.decoding="async";im.onload=()=>{box.replaceChildren(im)};im.src=box.dataset.photo;});
+document.querySelectorAll(".lh-img[data-photo]").forEach(box=>{const im=new Image();im.alt="";im.decoding="async";im.onload=()=>{box.replaceChildren(im)};im.src=box.dataset.photo;});
 /* opening film */
 (()=>{const f=document.querySelector(".film");if(!f)return;const v=f.querySelector("video"),b=f.querySelector(".film-toggle");
 const srcs=[...v.querySelectorAll("source")];let failed=0;
