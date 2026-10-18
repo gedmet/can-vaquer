@@ -97,7 +97,9 @@ nav.main + .langs{margin-left:0}
 @media (min-width:860px){.hero .arch{aspect-ratio:4/5;max-height:62vh}}
 .facts{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule)}
 .fact{padding:1.25rem 1rem 1.25rem 0;border-bottom:1px solid var(--rule);display:grid;gap:.3rem;align-content:start}
-@media (min-width:520px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:640px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1180px){.facts{grid-template-columns:repeat(7,minmax(0,1fr))}}
+@media (max-width:639px){.facts .fact:last-child:nth-child(odd){grid-column:1/-1}}
 .fact b{display:block;white-space:nowrap;font-family:var(--display);font-weight:400;font-size:var(--step-2);line-height:1.1}
 .fact span{font-size:var(--step--1);color:var(--ink-soft)}
 .price{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
@@ -369,8 +371,11 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
       <div class="facts">
         <div class="fact"><b>8</b><span data-i18n="f_bed">Bedrooms</span></div>
         <div class="fact"><b>8</b><span data-i18n="f_bath">Bathrooms</span></div>
-        <div class="fact"><b>700&nbsp;m²</b><span data-i18n="f_area">Built area</span></div>
-        <div class="fact"><b data-i18n="f_pool_v">Pool</b><span data-i18n="f_pool">In the courtyard</span></div>
+        <div class="fact"><b>700&nbsp;m²</b><span data-i18n="f_built">Built</span></div>
+        <div class="fact"><b>393&nbsp;m²</b><span data-i18n="s_plot">Plot</span></div>
+        <div class="fact"><b>5</b><span data-i18n="f_floors_n">Floors</span></div>
+        <div class="fact"><b>2</b><span data-i18n="f_garages">Garages</span></div>
+        <div class="fact"><b data-i18n="ph_date">May 2027</b><span data-i18n="f_done">Estimated Completion</span></div>
       </div>
     </div>
   </div>
