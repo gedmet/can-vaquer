@@ -335,11 +335,11 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
   <div class="wrap">
     <a class="brand" href="#top">Can Vaquer</a>
     <nav class="main" id="main-nav" aria-label="Sections">
+      <a href="#rooms" data-i18n="nav_rooms">Photos</a>
+      <a href="#features" data-i18n="nav_feat">Features</a>
+      <a href="#plans" data-i18n="nav_plans">Plans</a>
       <a href="#house" data-i18n="nav_house">The House</a>
       <a href="#history" data-i18n="nav_hist">History</a>
-      <a href="#features" data-i18n="nav_feat">Features</a>
-      <a href="#rooms" data-i18n="nav_rooms">Photos</a>
-      <a href="#plans" data-i18n="nav_plans">Plans</a>
       <a href="#location" data-i18n="nav_location">Location</a>
       <a href="#contact" data-i18n="nav_contact">Viewings</a>
     </nav>
@@ -379,66 +379,28 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
     </div>
   </div>
 
-  <section id="house">
+  <section id="rooms">
     <div class="wrap">
-      <div class="sec-head"><p class="label" data-i18n="house_label">The house</p><h2 data-i18n="house_h">A unique restoration</h2></div>
-      <div class="house-grid">
-        <div class="prose">
-          <p data-i18n="house_p1">Can Vaquer is a traditional townhouse in Felanitx, a market town in the south-east of Mallorca. The renovation keeps what made it: tall rooms under dark timber beams, walls of local stone, deep window reveals with wooden shutters, and handmade terracotta floors laid on the diagonal.</p>
-          <p data-i18n="house_p2">The new work is quiet and exact. Walls are finished in lime plaster, bathrooms are lined in glazed handmade tiles and pale stone, and the taps are brushed bronze. Out in the courtyard, a sandstone arcade, a lemon tree, a clementine tree and a vine surround the new pool.</p>
-          <p class="status"><span data-i18n="status">Renovation in progress. Completion expected</span> <strong data-i18n="ph_date">May 2027</strong></p>
-        </div>
-        <ul class="materials" aria-label="Materials">
-          <li><span class="sw" style="background:#6E6A63"></span><div><strong data-i18n="m7">Piedra de Binissalem</strong><small data-i18n="m7s">Grey limestone quarried at Binissalem</small></div></li>
-          <li><span class="sw" style="background:#B49A78"></span><div><strong data-i18n="m8">Paret en verd</strong><small data-i18n="m8s">Traditional limestone wall constructed with earth mortar</small></div></li>
-          <li><span class="sw" style="background:#D8CBB0"></span><div><strong data-i18n="m1">Marès sandstone</strong><small data-i18n="m1s">Arches and arcade around the courtyard</small></div></li>
-          <li><span class="sw" style="background:#E8E3D9"></span><div><strong data-i18n="m2">Lime plaster</strong><small data-i18n="m2s">Breathable, hand-trowelled walls</small></div></li>
-          <li><span class="sw" style="background:#4A3426"></span><div><strong data-i18n="m3">Timber beams</strong><small data-i18n="m3s">Original ceilings, kept and restored</small></div></li>
-          <li><span class="sw" style="background:#D49A7E"></span><div><strong data-i18n="m4">Terracotta floors</strong><small data-i18n="m4s">Handmade tiles by Can Benito, laid on the diagonal</small></div></li>
-          <li><span class="sw" style="background:#E7CDAE"></span><div><strong data-i18n="m5">Glazed handmade tiles</strong><small data-i18n="m5s">Showers and bathroom walls</small></div></li>
-          <li><span class="sw" style="background:#8A5F40"></span><div><strong data-i18n="m6">Brushed bronze</strong><small data-i18n="m6s">Taps, shower sets and bath filler</small></div></li>
-        </ul>
-        <figure class="house-concept"><div class="concept-ph ph-box" role="img" aria-label="Design concept diagram to follow" data-i18n-aria="concept_ph"><span data-i18n="concept_ph">Design concept diagram to follow</span></div><figcaption data-i18n="concept_cap">The overall design concept</figcaption></figure>
+      <div class="sec-head"><p class="label" data-i18n="rooms_label">Photos</p><h2 data-i18n="rooms_h">A walk through the house</h2></div>
+      <div class="gallery">
+        <figure class="arched"><button type="button"><img src="images/courtyard.jpg" width="1800" height="1504" loading="lazy" alt="" data-i18n-alt="c_courtyard"></button><figcaption><i>01</i><span data-i18n="c_courtyard">Through the stone arch to the courtyard</span></figcaption></figure>
+        <figure><button type="button"><img src="images/stair.jpg" width="1012" height="1800" loading="lazy" alt="" data-i18n-alt="c_stair"></button><figcaption><i>02</i><span data-i18n="c_stair">The stair to the upper floor</span></figcaption></figure>
+        <figure><button type="button"><img src="images/beams.jpg" width="1350" height="1600" loading="lazy" alt="" data-i18n-alt="c_beams"></button><figcaption><i>03</i><span data-i18n="c_beams">Timber beams over a stone wall</span></figcaption></figure>
+        <figure><button type="button"><img src="images/facade.jpg" width="1691" height="1800" loading="lazy" alt="" data-i18n-alt="c_facade"></button><figcaption><i>04</i><span data-i18n="c_facade">The house seen from the courtyard</span></figcaption></figure>
+        <figure><button type="button"><img src="images/shower.jpg" width="961" height="1800" loading="lazy" alt="" data-i18n-alt="c_shower"></button><figcaption><i>05</i><span data-i18n="c_shower">Walk-in shower in glazed tile</span></figcaption></figure>
+        <figure class="arched"><button type="button"><img src="images/doorway.jpg" width="1301" height="1800" loading="lazy" alt="" data-i18n-alt="c_doorway"></button><figcaption><i>06</i><span data-i18n="c_doorway">Lime plaster and exposed stone</span></figcaption></figure>
+        <figure><button type="button"><img src="images/bathwindow.jpg" width="1800" height="1440" loading="lazy" alt="" data-i18n-alt="c_bathwindow"></button><figcaption><i>07</i><span data-i18n="c_bathwindow">Bathroom under a stone lintel</span></figcaption></figure>
+        <figure><button type="button"><img src="images/handle.jpg" width="1800" height="1013" loading="lazy" alt="" data-i18n-alt="c_handle"></button><figcaption><i>08</i><span data-i18n="c_handle">Traditional Mallorcan bronze ironmongery</span></figcaption></figure>
+        <figure><button type="button"><img src="images/spout.jpg" width="962" height="1800" loading="lazy" alt="" data-i18n-alt="c_spout"></button><figcaption><i>09</i><span data-i18n="c_spout">Brushed bronze bath filler</span></figcaption></figure>
+        <figure><button type="button"><img src="images/bedroom.jpg" width="1068" height="2000" loading="lazy" alt="" data-i18n-alt="c_bedroom"></button><figcaption><i>10</i><span data-i18n="c_bedroom">Bedroom with green shutters</span></figcaption></figure>
+        <figure><button type="button"><img src="images/basin.jpg" width="1350" height="1800" loading="lazy" alt="" data-i18n-alt="c_basin"></button><figcaption><i>11</i><span data-i18n="c_basin">Hand-carved stone basin on a timber stand</span></figcaption></figure>
+        <figure class="vid"><button type="button"><img src="images/pool.jpg" width="1012" height="1800" loading="lazy" alt="" data-i18n-alt="c_pool" data-video="images/pool.mp4"><video muted loop playsinline preload="none" poster="images/pool.jpg" aria-hidden="true" tabindex="-1"><source src="images/pool.mp4" type="video/mp4"></video><span class="vid-badge" aria-hidden="true">▶</span></button><figcaption><i>12</i><span data-i18n="c_pool">The pool beneath the stone arcade</span></figcaption></figure>
+        <figure><button type="button"><img src="images/fountain.jpg" width="1350" height="1800" loading="lazy" alt="" data-i18n-alt="c_fountain"></button><figcaption><i>13</i><span data-i18n="c_fountain">Carved stone wall fountain</span></figcaption></figure>
       </div>
+      <p class="disclaimer" data-i18n="disclaimer">Photographs taken during the final stage of renovation. Finished photography will follow.</p>
     </div>
   </section>
 
-  <section id="history">
-    <div class="wrap">
-      <div class="sec-head"><p class="label" data-i18n="hist_label">History</p><h2 data-i18n="hist_h">Lost in time</h2></div>
-      <div class="hist-grid">
-        <div class="prose">
-          <p data-i18n="hist_p1">The earliest known record of Can Vaquer dates back to the ownership of Miquel Vaquer and Catalina Truyol in 1697. The house was featured in the 2016 book Cases i posades de Mallorca: Volum 2 written by Tomàs Vibot Railakari and José Villalonga Morell.</p>
-          <p class="hist-q" data-i18n="hist_q">“Can Vaquer is a magnificent paradigm of real estate in the hands of a Felanitx family with an important assortment of lands scattered throughout the municipality and with a notable presence of ecclesiastical owners. In parallel to this situation, the Vaquer family were associated with the owners of the Son Gaià estate, which provided a series of revenues that were reflected in the historic scale and fabric of the building.”</p>
-          <p data-i18n="hist_p2">For more than three hundred years it belonged to one family, the Vaquers and their descendants, and much of the house still shows how life was lived in a Mallorcan town in the eighteenth century.</p>
-          <p data-i18n="hist_p3">Other survivals include two painted sundials, a barrel-vaulted laundry with a small oven for heating water, a hexagonal stone cistern head in the courtyard, and a late-medieval openwork rose window, possibly rescued from a sixteenth-century Palma courtyard and set into a wall.</p>
-        </div>
-        <ol class="timeline">
-          <li><span class="tl-y" data-i18n="y_1600s">1600s</span><p data-i18n="t0">The notary Antoni Nadal lives in the house, and the street is known as Carrer Antoni Nadal after him.</p></li>
-          <li><span class="tl-y">1697</span><p data-i18n="t1">First record of the Vaquer family in the house: Miquel Vaquer and his wife Catalina Truyol.</p></li>
-          <li><span class="tl-y">1703</span><p data-i18n="t2">The entrance hall receives its wide cross vault, with a keystone dated 24 December 1703.</p></li>
-          <li><span class="tl-y">1736</span><p data-i18n="t3">The house passes from the priest Nicolau Vaquer to his brother Sebastià.</p></li>
-          <li><span class="tl-y" data-i18n="y_c1750">c. 1750</span><p data-i18n="t4">Two large sundials are painted on the south and west façades, possibly by Joan Oliver Rosselló, a Felanitx priest who wrote a manual on sundials in 1757.</p></li>
-          <li><span class="tl-y">1750</span><p data-i18n="t5">An inventory of the house lists the entrance, the kitchen, the stable and the pantry, with vineyards held across the municipality.</p></li>
-          <li><span class="tl-y">1791</span><p data-i18n="t6">The stone kitchen sink is carved with its date, beside the great fireplace and Catalan polychrome tiles.</p></li>
-          <li><span class="tl-y">1890</span><p data-i18n="t7">The street, once Carrer de l’Arraval, is renamed after Joan Antoni Puig Montserrat, Bishop of Puerto Rico.</p></li>
-          <li><span class="tl-y" data-i18n="y_2000s">2000s</span><p data-i18n="t8">The Vaquer family’s descendants keep the house until the early twenty-first century.</p></li>
-          <li><span class="tl-y">2027</span><p data-i18n="t9">A full restoration is completed.</p></li>
-        </ol>
-      </div>
-      <div class="hist-features">
-        <figure class="hist-fig">
-          <div class="hist-img round"><img src="images/rosette.jpg" width="800" height="800" loading="lazy" alt="" data-i18n-alt="ros_cap"></div>
-          <figcaption><h3 data-i18n="ros_h">The rosette of 1703</h3><p data-i18n="ros_p">The keystone of the entrance vault carries a carved rosette inscribed ‘ALS 24 XBRE DEL ANY 1703’, or 24 December 1703.</p><p data-i18n="ros_p2">‘XBRE’ is the abbreviation for December, from the Latin for ‘tenth month’, because the Roman calendar began in March. At its centre is a wing motif that can be attributed to the Nadal lineage. The land registry shows that in the seventeenth century the house was lived in by a notary, Antoni Nadal, and that Carrer del Bisbe Puig was once known as Carrer Antoni Nadal after him.</p><small data-i18n="ros_cap">Keystone of the entrance vault, 24 December 1703</small></figcaption>
-        </figure>
-        <figure class="hist-fig">
-          <div class="hist-img wide"><img src="images/sink1791.jpg" width="1600" height="900" loading="lazy" alt="" data-i18n-alt="sink_cap"></div>
-          <figcaption><h3 data-i18n="sink_h">The kitchen sink of 1791</h3><p data-i18n="sink_p">The old kitchen survives almost intact. Its stone sink, carved from a single piece and set under a semicircular arch, is carved with the date 1791, beside a great built-in fireplace and wall panels of Catalan polychrome tiles with wind-rose and acanthus motifs.</p></figcaption>
-        </figure>
-      </div>
-      <p class="fine" data-i18n="hist_src">Sources: historic report by Neus Serra Vives and Maria Ortiz Amengual (2022), with sundial notes by Joan Serra Busquets; Tomàs Vibot and José Villalonga, Cases i posades de Mallorca, vol. 2 (2016).</p>
-    </div>
-  </section>
   <section id="features">
     <div class="wrap">
       <div class="sec-head"><p class="label" data-i18n="feat_label">Features</p><h2 data-i18n="feat_h">Specification</h2></div>
@@ -504,27 +466,6 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
           <li><span data-i18n="s_energy">Energy rating</span> <em class="ph" data-i18n="ph_tag">To confirm</em></li>
         </ul></div>
       </div>
-    </div>
-  </section>
-  <section id="rooms">
-    <div class="wrap">
-      <div class="sec-head"><p class="label" data-i18n="rooms_label">Photos</p><h2 data-i18n="rooms_h">A walk through the house</h2></div>
-      <div class="gallery">
-        <figure class="arched"><button type="button"><img src="images/courtyard.jpg" width="1800" height="1504" loading="lazy" alt="" data-i18n-alt="c_courtyard"></button><figcaption><i>01</i><span data-i18n="c_courtyard">Through the stone arch to the courtyard</span></figcaption></figure>
-        <figure><button type="button"><img src="images/stair.jpg" width="1012" height="1800" loading="lazy" alt="" data-i18n-alt="c_stair"></button><figcaption><i>02</i><span data-i18n="c_stair">The stair to the upper floor</span></figcaption></figure>
-        <figure><button type="button"><img src="images/beams.jpg" width="1350" height="1600" loading="lazy" alt="" data-i18n-alt="c_beams"></button><figcaption><i>03</i><span data-i18n="c_beams">Timber beams over a stone wall</span></figcaption></figure>
-        <figure><button type="button"><img src="images/facade.jpg" width="1691" height="1800" loading="lazy" alt="" data-i18n-alt="c_facade"></button><figcaption><i>04</i><span data-i18n="c_facade">The house seen from the courtyard</span></figcaption></figure>
-        <figure><button type="button"><img src="images/shower.jpg" width="961" height="1800" loading="lazy" alt="" data-i18n-alt="c_shower"></button><figcaption><i>05</i><span data-i18n="c_shower">Walk-in shower in glazed tile</span></figcaption></figure>
-        <figure class="arched"><button type="button"><img src="images/doorway.jpg" width="1301" height="1800" loading="lazy" alt="" data-i18n-alt="c_doorway"></button><figcaption><i>06</i><span data-i18n="c_doorway">Lime plaster and exposed stone</span></figcaption></figure>
-        <figure><button type="button"><img src="images/bathwindow.jpg" width="1800" height="1440" loading="lazy" alt="" data-i18n-alt="c_bathwindow"></button><figcaption><i>07</i><span data-i18n="c_bathwindow">Bathroom under a stone lintel</span></figcaption></figure>
-        <figure><button type="button"><img src="images/handle.jpg" width="1800" height="1013" loading="lazy" alt="" data-i18n-alt="c_handle"></button><figcaption><i>08</i><span data-i18n="c_handle">Traditional Mallorcan bronze ironmongery</span></figcaption></figure>
-        <figure><button type="button"><img src="images/spout.jpg" width="962" height="1800" loading="lazy" alt="" data-i18n-alt="c_spout"></button><figcaption><i>09</i><span data-i18n="c_spout">Brushed bronze bath filler</span></figcaption></figure>
-        <figure><button type="button"><img src="images/bedroom.jpg" width="1068" height="2000" loading="lazy" alt="" data-i18n-alt="c_bedroom"></button><figcaption><i>10</i><span data-i18n="c_bedroom">Bedroom with green shutters</span></figcaption></figure>
-        <figure><button type="button"><img src="images/basin.jpg" width="1350" height="1800" loading="lazy" alt="" data-i18n-alt="c_basin"></button><figcaption><i>11</i><span data-i18n="c_basin">Hand-carved stone basin on a timber stand</span></figcaption></figure>
-        <figure class="vid"><button type="button"><img src="images/pool.jpg" width="1012" height="1800" loading="lazy" alt="" data-i18n-alt="c_pool" data-video="images/pool.mp4"><video muted loop playsinline preload="none" poster="images/pool.jpg" aria-hidden="true" tabindex="-1"><source src="images/pool.mp4" type="video/mp4"></video><span class="vid-badge" aria-hidden="true">▶</span></button><figcaption><i>12</i><span data-i18n="c_pool">The pool beneath the stone arcade</span></figcaption></figure>
-        <figure><button type="button"><img src="images/fountain.jpg" width="1350" height="1800" loading="lazy" alt="" data-i18n-alt="c_fountain"></button><figcaption><i>13</i><span data-i18n="c_fountain">Carved stone wall fountain</span></figcaption></figure>
-      </div>
-      <p class="disclaimer" data-i18n="disclaimer">Photographs taken during the final stage of renovation. Finished photography will follow.</p>
     </div>
   </section>
 
@@ -652,6 +593,68 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
       <p class="disclaimer" data-i18n="plans_note">Indicative plans, not to scale. Room sizes are approximate and the final layout may differ.</p>
     </div>
   </section>
+
+  <section id="house">
+    <div class="wrap">
+      <div class="sec-head"><p class="label" data-i18n="house_label">The house</p><h2 data-i18n="house_h">A unique restoration</h2></div>
+      <div class="house-grid">
+        <div class="prose">
+          <p data-i18n="house_p1">Can Vaquer is a traditional townhouse in Felanitx, a market town in the south-east of Mallorca. The renovation keeps what made it: tall rooms under dark timber beams, walls of local stone, deep window reveals with wooden shutters, and handmade terracotta floors laid on the diagonal.</p>
+          <p data-i18n="house_p2">The new work is quiet and exact. Walls are finished in lime plaster, bathrooms are lined in glazed handmade tiles and pale stone, and the taps are brushed bronze. Out in the courtyard, a sandstone arcade, a lemon tree, a clementine tree and a vine surround the new pool.</p>
+          <p class="status"><span data-i18n="status">Renovation in progress. Completion expected</span> <strong data-i18n="ph_date">May 2027</strong></p>
+        </div>
+        <ul class="materials" aria-label="Materials">
+          <li><span class="sw" style="background:#6E6A63"></span><div><strong data-i18n="m7">Piedra de Binissalem</strong><small data-i18n="m7s">Grey limestone quarried at Binissalem</small></div></li>
+          <li><span class="sw" style="background:#B49A78"></span><div><strong data-i18n="m8">Paret en verd</strong><small data-i18n="m8s">Traditional limestone wall constructed with earth mortar</small></div></li>
+          <li><span class="sw" style="background:#D8CBB0"></span><div><strong data-i18n="m1">Marès sandstone</strong><small data-i18n="m1s">Arches and arcade around the courtyard</small></div></li>
+          <li><span class="sw" style="background:#E8E3D9"></span><div><strong data-i18n="m2">Lime plaster</strong><small data-i18n="m2s">Breathable, hand-trowelled walls</small></div></li>
+          <li><span class="sw" style="background:#4A3426"></span><div><strong data-i18n="m3">Timber beams</strong><small data-i18n="m3s">Original ceilings, kept and restored</small></div></li>
+          <li><span class="sw" style="background:#D49A7E"></span><div><strong data-i18n="m4">Terracotta floors</strong><small data-i18n="m4s">Handmade tiles by Can Benito, laid on the diagonal</small></div></li>
+          <li><span class="sw" style="background:#E7CDAE"></span><div><strong data-i18n="m5">Glazed handmade tiles</strong><small data-i18n="m5s">Showers and bathroom walls</small></div></li>
+          <li><span class="sw" style="background:#8A5F40"></span><div><strong data-i18n="m6">Brushed bronze</strong><small data-i18n="m6s">Taps, shower sets and bath filler</small></div></li>
+        </ul>
+        <figure class="house-concept"><div class="concept-ph ph-box" role="img" aria-label="Design concept diagram to follow" data-i18n-aria="concept_ph"><span data-i18n="concept_ph">Design concept diagram to follow</span></div><figcaption data-i18n="concept_cap">The overall design concept</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <div class="wrap">
+      <div class="sec-head"><p class="label" data-i18n="hist_label">History</p><h2 data-i18n="hist_h">Lost in time</h2></div>
+      <div class="hist-grid">
+        <div class="prose">
+          <p data-i18n="hist_p1">The earliest known record of Can Vaquer dates back to the ownership of Miquel Vaquer and Catalina Truyol in 1697. The house was featured in the 2016 book Cases i posades de Mallorca: Volum 2 written by Tomàs Vibot Railakari and José Villalonga Morell.</p>
+          <p class="hist-q" data-i18n="hist_q">“Can Vaquer is a magnificent paradigm of real estate in the hands of a Felanitx family with an important assortment of lands scattered throughout the municipality and with a notable presence of ecclesiastical owners. In parallel to this situation, the Vaquer family were associated with the owners of the Son Gaià estate, which provided a series of revenues that were reflected in the historic scale and fabric of the building.”</p>
+          <p data-i18n="hist_p2">For more than three hundred years it belonged to one family, the Vaquers and their descendants, and much of the house still shows how life was lived in a Mallorcan town in the eighteenth century.</p>
+          <p data-i18n="hist_p3">Other survivals include two painted sundials, a barrel-vaulted laundry with a small oven for heating water, a hexagonal stone cistern head in the courtyard, and a late-medieval openwork rose window, possibly rescued from a sixteenth-century Palma courtyard and set into a wall.</p>
+        </div>
+        <ol class="timeline">
+          <li><span class="tl-y" data-i18n="y_1600s">1600s</span><p data-i18n="t0">The notary Antoni Nadal lives in the house, and the street is known as Carrer Antoni Nadal after him.</p></li>
+          <li><span class="tl-y">1697</span><p data-i18n="t1">First record of the Vaquer family in the house: Miquel Vaquer and his wife Catalina Truyol.</p></li>
+          <li><span class="tl-y">1703</span><p data-i18n="t2">The entrance hall receives its wide cross vault, with a keystone dated 24 December 1703.</p></li>
+          <li><span class="tl-y">1736</span><p data-i18n="t3">The house passes from the priest Nicolau Vaquer to his brother Sebastià.</p></li>
+          <li><span class="tl-y" data-i18n="y_c1750">c. 1750</span><p data-i18n="t4">Two large sundials are painted on the south and west façades, possibly by Joan Oliver Rosselló, a Felanitx priest who wrote a manual on sundials in 1757.</p></li>
+          <li><span class="tl-y">1750</span><p data-i18n="t5">An inventory of the house lists the entrance, the kitchen, the stable and the pantry, with vineyards held across the municipality.</p></li>
+          <li><span class="tl-y">1791</span><p data-i18n="t6">The stone kitchen sink is carved with its date, beside the great fireplace and Catalan polychrome tiles.</p></li>
+          <li><span class="tl-y">1890</span><p data-i18n="t7">The street, once Carrer de l’Arraval, is renamed after Joan Antoni Puig Montserrat, Bishop of Puerto Rico.</p></li>
+          <li><span class="tl-y" data-i18n="y_2000s">2000s</span><p data-i18n="t8">The Vaquer family’s descendants keep the house until the early twenty-first century.</p></li>
+          <li><span class="tl-y">2027</span><p data-i18n="t9">A full restoration is completed.</p></li>
+        </ol>
+      </div>
+      <div class="hist-features">
+        <figure class="hist-fig">
+          <div class="hist-img round"><img src="images/rosette.jpg" width="800" height="800" loading="lazy" alt="" data-i18n-alt="ros_cap"></div>
+          <figcaption><h3 data-i18n="ros_h">The rosette of 1703</h3><p data-i18n="ros_p">The keystone of the entrance vault carries a carved rosette inscribed ‘ALS 24 XBRE DEL ANY 1703’, or 24 December 1703.</p><p data-i18n="ros_p2">‘XBRE’ is the abbreviation for December, from the Latin for ‘tenth month’, because the Roman calendar began in March. At its centre is a wing motif that can be attributed to the Nadal lineage. The land registry shows that in the seventeenth century the house was lived in by a notary, Antoni Nadal, and that Carrer del Bisbe Puig was once known as Carrer Antoni Nadal after him.</p><small data-i18n="ros_cap">Keystone of the entrance vault, 24 December 1703</small></figcaption>
+        </figure>
+        <figure class="hist-fig">
+          <div class="hist-img wide"><img src="images/sink1791.jpg" width="1600" height="900" loading="lazy" alt="" data-i18n-alt="sink_cap"></div>
+          <figcaption><h3 data-i18n="sink_h">The kitchen sink of 1791</h3><p data-i18n="sink_p">The old kitchen survives almost intact. Its stone sink, carved from a single piece and set under a semicircular arch, is carved with the date 1791, beside a great built-in fireplace and wall panels of Catalan polychrome tiles with wind-rose and acanthus motifs.</p></figcaption>
+        </figure>
+      </div>
+      <p class="fine" data-i18n="hist_src">Sources: historic report by Neus Serra Vives and Maria Ortiz Amengual (2022), with sundial notes by Joan Serra Busquets; Tomàs Vibot and José Villalonga, Cases i posades de Mallorca, vol. 2 (2016).</p>
+    </div>
+  </section>
+
   <section id="location">
     <div class="wrap">
       <div class="sec-head"><p class="label" data-i18n="nav_location">Location</p><h2>Felanitx</h2></div>
