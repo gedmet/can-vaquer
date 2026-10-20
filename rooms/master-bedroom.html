@@ -8,7 +8,7 @@
 <title>Master Suite · Can Vaquer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
 @font-face{font-family:"Ogg Roman";src:url("../fonts/OggRoman.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 /* Layout: a walk through the house. Arched openings echo the courtyard arcade; lime-plaster ground, oak-beam ink, shutter-green accent. */
@@ -82,14 +82,18 @@ nav.main + .langs{margin-left:0}
 
 /* hero */
 .hero .wrap{display:grid;grid-template-columns:1fr;gap:2.5rem;padding-block:3rem 4rem;align-items:end}
-@media (min-width:860px){.hero .wrap{grid-template-columns:1.05fr .95fr;gap:4rem;padding-block:4.5rem 5.5rem}}
-.hero h1{font-family:var(--title);font-size:calc(var(--step-4)*.8);letter-spacing:-.01em;margin-block:.9rem 1.4rem}
-.hero .lede{font-size:var(--step-1);max-width:30ch;color:var(--ink-soft);line-height:1.5}
+@media (min-width:860px){.hero .wrap{grid-template-columns:1.63fr 1fr;gap:4rem;padding-block:4.5rem 5.5rem}}
+.hero h1{font-family:var(--title);font-size:calc(var(--step-4)*.8);letter-spacing:-.01em;margin-block:0 1.4rem}
+.hero .lede{font-style:italic;font-size:var(--step-1);max-width:none;color:var(--ink-soft);line-height:1.5}
 .arch{position:relative;border-radius:999px 999px 0 0;overflow:hidden;background:var(--plaster-2);aspect-ratio:3/4.4;max-width:100%}
 .arch img{width:100%;height:100%;object-fit:cover;display:block}
 .hero .arch{max-height:78vh;width:100%;justify-self:end}
-.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem 2rem;margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--rule)}
-@media (min-width:520px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:860px){.hero .arch{aspect-ratio:4/5;max-height:62vh}}
+.facts{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule)}
+.fact{padding:1.25rem 1rem 1.25rem 0;border-bottom:1px solid var(--rule);display:grid;gap:.3rem;align-content:start}
+@media (min-width:640px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1180px){.facts{grid-template-columns:repeat(7,minmax(0,1fr))}}
+@media (max-width:639px){.facts .fact:last-child:nth-child(odd){grid-column:1/-1}}
 .fact b{display:block;white-space:nowrap;font-family:var(--display);font-weight:400;font-size:var(--step-2);line-height:1.1}
 .fact span{font-size:var(--step--1);color:var(--ink-soft)}
 .price{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
@@ -100,14 +104,25 @@ nav.main + .langs{margin-left:0}
 .btn:hover{filter:brightness(1.06)}
 
 section{border-top:1px solid var(--rule)}
-section > .wrap{padding-block:4.5rem}
-@media (min-width:860px){section > .wrap{padding-block:6.5rem}}
+/* gap above each section label matches the label's distance from the left edge of the screen */
+section{container-type:inline-size}
+section > .wrap{padding-top:max(16px,calc((100cqw - 1180px)/2 + 16px));padding-bottom:4.5rem}
+@media (min-width:700px){section > .wrap{padding-top:max(32px,calc((100cqw - 1180px)/2 + 32px))}}
+@media (min-width:860px){section > .wrap{padding-bottom:6.5rem}}
 .sec-head{display:grid;gap:.8rem;margin-bottom:2.75rem}
 .sec-head h2{font-size:var(--step-3)}
+.sec-head h2{font-family:var(--title);font-weight:400}
 
 /* the house */
 .house-grid{display:grid;gap:3rem}
 @media (min-width:860px){.house-grid{grid-template-columns:1.1fr .9fr;gap:5rem;align-items:start}}
+@media (min-width:860px) and (max-width:1179px){.house-concept{grid-column:1/-1;grid-template-columns:1fr 1fr}}
+@media (min-width:1180px){.house-grid{grid-template-columns:1.15fr .85fr 1fr;gap:3.5rem}}
+.house-concept{display:grid;gap:2rem;align-content:start}
+.house-concept figure{margin:0;display:grid;gap:.75rem;align-content:start}
+.concept-ph{aspect-ratio:3/2;background:var(--plaster-2);border-radius:2px;color:var(--shutter);font-size:.875rem;text-align:center;padding:1rem}
+.house-concept figcaption{font-size:.875rem;color:var(--ink-soft)}
+.house-concept img{display:block;width:100%;height:auto;border-radius:2px}
 .prose{display:grid;gap:1.25rem;max-width:62ch;font-size:1.0625rem}
 .prose p:first-child::first-letter{font-family:var(--title);float:left;font-size:3.6em;line-height:.85;padding:.08em .12em 0 0;color:var(--shutter)}
 .status{margin-top:.5rem;color:var(--ink-soft);font-size:.95rem}
@@ -123,7 +138,9 @@ section > .wrap{padding-block:4.5rem}
 .film.no-video .film-v{animation:film-in 2.4s ease both,drift 26s ease-in-out infinite alternate}
 .film-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,17,14,.62) 0%,rgba(20,17,14,.12) 45%,rgba(20,17,14,.22) 100%);pointer-events:none}
 .film-text{position:absolute;left:0;right:0;bottom:clamp(4.5rem,13vh,8rem);text-align:center;padding-inline:16px;animation:film-up 1.6s .6s cubic-bezier(.2,.7,.2,1) both}
-.film-place{margin:0 0 .6rem;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;opacity:.9}
+.film-type{margin:.9rem 0 0;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;opacity:.9}
+.film-place{margin:.55rem 0 0;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;opacity:.9}
+.film-soon{margin:.55rem 0 0;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;opacity:.9}
 .film-title{margin:0;font-family:var(--title);font-weight:400;font-size:clamp(2.24rem,7.2vw,5.6rem);line-height:1;letter-spacing:.01em}
 .film-down{position:absolute;left:50%;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:grid;place-items:center;width:44px;height:44px;border-radius:999px;color:inherit;animation:nudge 2.4s 2.4s ease-in-out infinite}
 .film-toggle{position:absolute;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));display:grid;place-items:center;width:44px;height:44px;border-radius:999px;border:1px solid rgba(244,239,231,.45);background:rgba(20,17,14,.3);color:inherit;cursor:pointer}
@@ -143,15 +160,33 @@ section > .wrap{padding-block:4.5rem}
 .gallery figure.arched button{border-radius:999px 999px 2px 2px}
 .gallery img{display:block;width:100%;height:auto;transition:transform .6s ease}
 .gallery button:hover img{transform:scale(1.025)}
+.gallery figure.vid button{position:relative}
+.gallery figure.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.vid-badge{position:absolute;right:12px;bottom:12px;width:36px;height:36px;border-radius:999px;background:rgba(20,17,14,.55);color:#ECE5D9;display:grid;place-items:center;font-size:.8rem;padding-left:2px}
+dialog.lb video.lb-img{background:#000}
 .gallery figcaption{font-size:.875rem;color:var(--ink-soft);margin-top:.6rem;display:flex;gap:.6rem}
 .gallery figcaption i{font-style:normal;font-variant-numeric:tabular-nums;color:var(--mares)}
 .disclaimer{font-size:.875rem;color:var(--ink-soft);margin-top:.5rem;max-width:60ch}
 
-dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:92vh}
-dialog.lb::backdrop{background:rgba(20,17,14,.88)}
-dialog.lb img{display:block;max-width:100%;max-height:84vh;width:auto;height:auto;margin-inline:auto}
-dialog.lb p{color:#ECE5D9;text-align:center;font-size:.9rem;margin-top:.75rem}
-dialog.lb .close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:999px;border:1px solid rgba(236,229,217,.4);background:rgba(20,17,14,.5);color:#ECE5D9;font-size:1.4rem;cursor:pointer}
+dialog.lb{border:0;padding:0;margin:0;background:transparent;width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;color:#ECE5D9;overflow:hidden}
+dialog.lb[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto auto}
+dialog.lb::backdrop{background:#14110E}
+.lb-top{display:flex;align-items:center;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top,0px)) calc(12px + env(safe-area-inset-right,0px)) 0 calc(16px + env(safe-area-inset-left,0px));font-size:.85rem;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.lb-stage{position:relative;min-height:0;overflow:hidden}
+dialog.lb .lb-img{position:absolute;inset:0;margin:auto;display:block;max-width:calc(100% - 2*clamp(16px,6vw,84px));max-height:calc(100% - 1.5rem);width:auto;height:auto;user-select:none;-webkit-user-drag:none}
+dialog.lb .lb-cap{text-align:center;font-size:.9rem;margin:0;padding:0 16px .6rem;min-height:1.5em}
+.lb-btn{width:44px;height:44px;border-radius:999px;border:1px solid rgba(236,229,217,.4);background:rgba(20,17,14,.5);color:#ECE5D9;cursor:pointer;display:grid;place-items:center;font-size:1.4rem;line-height:1}
+.lb-btn:focus:not(:focus-visible){outline:none}
+.lb-btn:hover{background:rgba(236,229,217,.15)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:clamp(8px,1.5vw,24px)}.lb-next{right:clamp(8px,1.5vw,24px)}
+.lb-thumbs{display:flex;gap:8px;overflow-x:auto;padding:4px 16px calc(14px + env(safe-area-inset-bottom,0px));scrollbar-width:none;justify-content:safe center}
+.lb-thumbs::-webkit-scrollbar{display:none}
+.lb-thumbs button{flex:0 0 auto;padding:0;border:0;background:none;cursor:pointer;opacity:.45;transition:opacity .2s;outline-offset:2px}
+.lb-thumbs button:hover,.lb-thumbs button[aria-current="true"]{opacity:1}
+.lb-thumbs button[aria-current="true"]{box-shadow:0 0 0 1px #ECE5D9}
+.lb-thumbs img{display:block;height:64px;width:auto;max-width:none}
+@media (max-width:640px){.lb-prev,.lb-next{display:none}.lb-thumbs img{height:48px}}
 
 /* key facts table */
 .spec{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
@@ -182,8 +217,10 @@ dialog.lb .close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));ri
 @media (min-width:1040px){.lh-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .lh-grid a{display:flex;flex-direction:column;gap:.3rem;text-decoration:none;color:inherit}
 .lh-img{display:grid;place-items:center;aspect-ratio:4/3;background:var(--plaster-2);border-radius:2px;overflow:hidden;margin-bottom:.45rem}
-.lh-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.lh-img{position:relative}
+.lh-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
 .lh-grid a:hover .lh-img img{transform:scale(1.03)}
+.lh-img[data-photo$="almunia.jpg"] img{object-position:50% 75%}
 .lh-cat{font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mares)}
 .lh-grid b{font-family:var(--display);font-weight:400;font-size:1.15rem;line-height:1.2}
 .lh-grid a:hover b{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
@@ -243,7 +280,7 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 @media (min-width:640px){.feat-stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (min-width:1180px){.feat-stats{grid-template-columns:repeat(7,minmax(0,1fr))}}
 @media (max-width:639px){.feat-stats div:last-child:nth-child(odd){grid-column:1/-1}}
-.feat-stats div{padding:1.25rem 1rem 1.25rem 0;border-bottom:1px solid var(--rule);display:flex;flex-direction:column-reverse;gap:.3rem}
+.feat-stats div{padding:1.25rem 1rem 1.25rem 0;border-bottom:1px solid var(--rule);display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:.3rem}
 .feat-stats dt{font-size:var(--step--1);color:var(--ink-soft)}
 .feat-stats dd{margin:0;font-family:var(--display);font-size:var(--step-2);line-height:1.1;white-space:nowrap}
 .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:2.75rem 3rem}
@@ -263,6 +300,8 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 @media (max-width:420px){.timeline li{grid-template-columns:1fr;gap:.15rem}}
 .hist-features{display:grid;gap:3rem;margin-top:4.5rem}
 @media (min-width:800px){.hist-features{grid-template-columns:1fr 1fr;gap:4rem}}
+@media (min-width:1100px){.hist-features{grid-template-columns:repeat(3,1fr);gap:3rem}}
+.hist-q{font-style:italic;color:var(--ink-soft)}
 .hist-fig{margin:0;display:grid;gap:1.5rem;align-content:start}
 .hist-img{max-width:100%;width:min(100%,24rem);aspect-ratio:1;overflow:hidden;background:var(--plaster-2)}
 .hist-img img{width:100%;height:100%;object-fit:cover;display:block}
@@ -272,14 +311,7 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 .hist-fig figcaption{display:grid;gap:.7rem;max-width:58ch}
 .hist-fig h3{font-size:var(--step-2)}
 .hist-fig small{font-size:.8125rem;color:var(--ink-soft)}
-.hist-before{margin-top:4.5rem}
-.hist-before h3{font-size:var(--step-2)}
-.hist-before>p{color:var(--ink-soft);margin:.6rem 0 2rem;max-width:58ch}
-.hist-before figcaption small{font-size:.75rem;opacity:.85}
-.hist-quote{margin:4.5rem 0 0;padding:2rem 0 0;border-top:1px solid var(--rule);max-width:48rem}
-.hist-quote p{font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);line-height:1.3;text-wrap:balance}
-.hist-quote cite{display:block;margin-top:1rem;font-style:normal;font-size:.875rem;color:var(--ink-soft)}
-#history .fine{margin-top:2rem;max-width:70ch}
+#history .fine{margin-top:3rem;max-width:70ch}
 </style>
 <style>
 /* room page */
@@ -309,10 +341,6 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 .rp-cta{border-top:1px solid var(--rule);padding-block:3rem;display:flex;flex-wrap:wrap;gap:1.5rem 3rem;align-items:center;justify-content:space-between}
 .rp-cta h2{font-family:var(--display);font-weight:400;font-size:var(--step-2);margin:0 0 .4rem}
 .rp-cta p{margin:0;color:var(--ink-soft)}
-header.top .back{margin-left:auto;font-size:.875rem;color:var(--ink-soft);text-decoration:none;white-space:nowrap}
-header.top .back:hover{color:var(--ink)}
-@media (max-width:560px){header.top .back{display:none}}
-header.top .back + .langs{margin-left:0}
 </style>
 </head>
 <body>
@@ -320,13 +348,22 @@ header.top .back + .langs{margin-left:0}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="../index.html">Can Vaquer</a>
-    <a class="back" href="../index.html#plans" data-i18n="back">Back to the floor plans</a>
+    <nav class="main" id="main-nav" aria-label="Sections">
+      <a href="../index.html#rooms" data-i18n="nav_rooms">Photos</a>
+      <a href="../index.html#features" data-i18n="nav_feat">Features</a>
+      <a href="../index.html#plans" data-i18n="nav_plans">Plans</a>
+      <a href="../index.html#house" data-i18n="nav_house">The House</a>
+      <a href="../index.html#history" data-i18n="nav_hist">History</a>
+      <a href="../index.html#location" data-i18n="nav_location">Location</a>
+      <a href="../index.html#contact" data-i18n="nav_contact">Viewings</a>
+    </nav>
     <div class="langs" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="es" aria-pressed="false">ES</button>
       <button type="button" data-lang="ca" aria-pressed="false">CA</button>
       <button type="button" data-lang="de" aria-pressed="false">DE</button>
     </div>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Menu" data-i18n-aria="menu"><span></span></button>
   </div>
 </header>
 <main>
@@ -385,12 +422,13 @@ header.top .back + .langs{margin-left:0}
   </div>
 </footer>
 <script>
-const I18N={"en": {"fin_floor_v": "Handmade terracotta tiles with a decorative border", "fin_walls_v": "A mix of lime plaster and exposed stone with lime mortar", "fin_ceil_v": "Exposed beams", "back": "Back to the floor plans", "crumb_plans": "Floor plans", "floor": "Second floor", "title": "Master Suite", "lead": "Details", "f_floor": "Floor", "f_area": "Area", "f_dims": "Dimensions", "f_aspect": "Aspect", "f_ensuite": "Connects to", "ph": "To confirm", "ph_photo": "Photo to add", "ph_text": "Description to follow: a few lines about the light, the views and how the room is used.", "about": "About", "fin": "Specification", "fin_floor": "Floor", "fin_walls": "Walls", "fin_ceil": "Ceiling", "fin_light": "Lighting", "fin_heat": "Heating and cooling", "fin_heat_v": "Air source heat pump", "fin_win": "Windows and shutters", "where": "Plan", "plan_cap": "Second floor plan, with the master suite highlighted", "cta_h": "See it for yourself", "cta_p": "Viewings are by appointment only.", "cta": "Arrange a viewing", "notice": "Preview. Items with a dashed outline are placeholders to fill in before launch.", "foot": "FOR SALE · Felanitx, Mallorca", "doc": "Master Suite · Can Vaquer"}, "es": {"fin_floor_v": "Baldosas de terracota artesanales con cenefa decorativa", "fin_walls_v": "Combinación de enlucido de cal y piedra vista con mortero de cal", "fin_ceil_v": "Vigas vistas", "back": "Volver a los planos", "crumb_plans": "Planos", "floor": "Segunda planta", "title": "Suite principal", "lead": "Detalles", "f_floor": "Planta", "f_area": "Superficie", "f_dims": "Medidas", "f_aspect": "Orientación", "f_ensuite": "Comunica con", "ph": "A confirmar", "ph_photo": "Foto pendiente", "ph_text": "Descripción pendiente: unas líneas sobre la luz, las vistas y el uso de la estancia.", "about": "Descripción", "fin": "Memoria de calidades", "fin_floor": "Suelo", "fin_walls": "Paredes", "fin_ceil": "Techo", "fin_light": "Iluminación", "fin_heat": "Climatización", "fin_heat_v": "Aerotermia", "fin_win": "Ventanas y persianas", "where": "Plano", "plan_cap": "Plano de la segunda planta, con la suite principal resaltada", "cta_h": "Véalo en persona", "cta_p": "Las visitas son solo con cita previa.", "cta": "Concertar una visita", "notice": "Vista previa. Los elementos con borde discontinuo son datos pendientes de completar antes de publicar.", "foot": "EN VENTA · Felanitx, Mallorca", "doc": "Suite principal · Can Vaquer"}, "ca": {"fin_floor_v": "Rajoles de terracota artesanals amb sanefa decorativa", "fin_walls_v": "Combinació d’arrebossat de calç i pedra vista amb morter de calç", "fin_ceil_v": "Bigues vistes", "back": "Tornar als plànols", "crumb_plans": "Plànols", "floor": "Segona planta", "title": "Suite principal", "lead": "Detalls", "f_floor": "Planta", "f_area": "Superfície", "f_dims": "Mides", "f_aspect": "Orientació", "f_ensuite": "Comunica amb", "ph": "Per confirmar", "ph_photo": "Foto pendent", "ph_text": "Descripció pendent: unes línies sobre la llum, les vistes i l’ús de l’estança.", "about": "Descripció", "fin": "Memòria de qualitats", "fin_floor": "Paviment", "fin_walls": "Parets", "fin_ceil": "Sostre", "fin_light": "Il·luminació", "fin_heat": "Climatització", "fin_heat_v": "Aerotèrmia", "fin_win": "Finestres i persianes", "where": "Plànol", "plan_cap": "Plànol de la segona planta, amb la suite principal destacada", "cta_h": "Veniu a veure-la", "cta_p": "Les visites són només amb cita prèvia.", "cta": "Concertar una visita", "notice": "Vista prèvia. Els elements amb vora discontínua són dades pendents de completar abans de publicar.", "foot": "EN VENDA · Felanitx, Mallorca", "doc": "Suite principal · Can Vaquer"}, "de": {"fin_floor_v": "Handgefertigte Terrakottafliesen mit Zierbordüre", "fin_walls_v": "Kalkputz im Wechsel mit sichtbarem Naturstein in Kalkmörtel", "fin_ceil_v": "Sichtbare Holzbalken", "back": "Zurück zu den Grundrissen", "crumb_plans": "Grundrisse", "floor": "2. Obergeschoss", "title": "Master-Suite", "lead": "Details", "f_floor": "Etage", "f_area": "Fläche", "f_dims": "Maße", "f_aspect": "Ausrichtung", "f_ensuite": "Verbunden mit", "ph": "Folgt", "ph_photo": "Foto folgt", "ph_text": "Beschreibung folgt: ein paar Zeilen über das Licht, den Ausblick und die Nutzung des Raums.", "about": "Beschreibung", "fin": "Ausstattung", "fin_floor": "Boden", "fin_walls": "Wände", "fin_ceil": "Decke", "fin_light": "Beleuchtung", "fin_heat": "Heizen und Kühlen", "fin_heat_v": "Luft-Wasser-Wärmepumpe", "fin_win": "Fenster und Läden", "where": "Grundriss", "plan_cap": "Grundriss des 2. Obergeschosses, Master-Suite hervorgehoben", "cta_h": "Überzeugen Sie sich selbst", "cta_p": "Besichtigungen nur nach Vereinbarung.", "cta": "Besichtigung vereinbaren", "notice": "Vorschau. Gestrichelt umrandete Angaben sind Platzhalter, die vor dem Start ergänzt werden.", "foot": "ZU VERKAUFEN · Felanitx, Mallorca", "doc": "Master-Suite · Can Vaquer"}};
+const I18N={"en": {"fin_floor_v": "Handmade terracotta tiles with a decorative border", "fin_walls_v": "A mix of lime plaster and exposed stone with lime mortar", "fin_ceil_v": "Exposed beams", "back": "Back to the floor plans", "crumb_plans": "Floor plans", "floor": "Second floor", "title": "Master Suite", "lead": "Details", "f_floor": "Floor", "f_area": "Area", "f_dims": "Dimensions", "f_aspect": "Aspect", "f_ensuite": "Connects to", "ph": "To confirm", "ph_photo": "Photo to add", "ph_text": "Description to follow: a few lines about the light, the views and how the room is used.", "about": "About", "fin": "Specification", "fin_floor": "Floor", "fin_walls": "Walls", "fin_ceil": "Ceiling", "fin_light": "Lighting", "fin_heat": "Heating and cooling", "fin_heat_v": "Air source heat pump", "fin_win": "Windows and shutters", "where": "Plan", "plan_cap": "Second floor plan, with the master suite highlighted", "cta_h": "See it for yourself", "cta_p": "Viewings are by appointment only.", "cta": "Arrange a viewing", "notice": "Preview. Items with a dashed outline are placeholders to fill in before launch.", "foot": "FOR SALE · Felanitx, Mallorca", "doc": "Master Suite · Can Vaquer", "nav_rooms": "Photos", "nav_feat": "Features", "nav_plans": "Plans", "nav_house": "The House", "nav_hist": "History", "nav_location": "Location", "nav_contact": "Viewings", "menu": "Menu"}, "es": {"fin_floor_v": "Baldosas de terracota artesanales con cenefa decorativa", "fin_walls_v": "Combinación de enlucido de cal y piedra vista con mortero de cal", "fin_ceil_v": "Vigas vistas", "back": "Volver a los planos", "crumb_plans": "Planos", "floor": "Segunda planta", "title": "Suite principal", "lead": "Detalles", "f_floor": "Planta", "f_area": "Superficie", "f_dims": "Medidas", "f_aspect": "Orientación", "f_ensuite": "Comunica con", "ph": "A confirmar", "ph_photo": "Foto pendiente", "ph_text": "Descripción pendiente: unas líneas sobre la luz, las vistas y el uso de la estancia.", "about": "Descripción", "fin": "Memoria de calidades", "fin_floor": "Suelo", "fin_walls": "Paredes", "fin_ceil": "Techo", "fin_light": "Iluminación", "fin_heat": "Climatización", "fin_heat_v": "Aerotermia", "fin_win": "Ventanas y persianas", "where": "Plano", "plan_cap": "Plano de la segunda planta, con la suite principal resaltada", "cta_h": "Véalo en persona", "cta_p": "Las visitas son solo con cita previa.", "cta": "Concertar una visita", "notice": "Vista previa. Los elementos con borde discontinuo son datos pendientes de completar antes de publicar.", "foot": "EN VENTA · Felanitx, Mallorca", "doc": "Suite principal · Can Vaquer", "nav_rooms": "Fotos", "nav_feat": "Características", "nav_plans": "Planos", "nav_house": "La Casa", "nav_hist": "Historia", "nav_location": "Ubicación", "nav_contact": "Visitas", "menu": "Menú"}, "ca": {"fin_floor_v": "Rajoles de terracota artesanals amb sanefa decorativa", "fin_walls_v": "Combinació d’arrebossat de calç i pedra vista amb morter de calç", "fin_ceil_v": "Bigues vistes", "back": "Tornar als plànols", "crumb_plans": "Plànols", "floor": "Segona planta", "title": "Suite principal", "lead": "Detalls", "f_floor": "Planta", "f_area": "Superfície", "f_dims": "Mides", "f_aspect": "Orientació", "f_ensuite": "Comunica amb", "ph": "Per confirmar", "ph_photo": "Foto pendent", "ph_text": "Descripció pendent: unes línies sobre la llum, les vistes i l’ús de l’estança.", "about": "Descripció", "fin": "Memòria de qualitats", "fin_floor": "Paviment", "fin_walls": "Parets", "fin_ceil": "Sostre", "fin_light": "Il·luminació", "fin_heat": "Climatització", "fin_heat_v": "Aerotèrmia", "fin_win": "Finestres i persianes", "where": "Plànol", "plan_cap": "Plànol de la segona planta, amb la suite principal destacada", "cta_h": "Veniu a veure-la", "cta_p": "Les visites són només amb cita prèvia.", "cta": "Concertar una visita", "notice": "Vista prèvia. Els elements amb vora discontínua són dades pendents de completar abans de publicar.", "foot": "EN VENDA · Felanitx, Mallorca", "doc": "Suite principal · Can Vaquer", "nav_rooms": "Fotos", "nav_feat": "Característiques", "nav_plans": "Plànols", "nav_house": "La Casa", "nav_hist": "Història", "nav_location": "Situació", "nav_contact": "Visites", "menu": "Menú"}, "de": {"fin_floor_v": "Handgefertigte Terrakottafliesen mit Zierbordüre", "fin_walls_v": "Kalkputz im Wechsel mit sichtbarem Naturstein in Kalkmörtel", "fin_ceil_v": "Sichtbare Holzbalken", "back": "Zurück zu den Grundrissen", "crumb_plans": "Grundrisse", "floor": "2. Obergeschoss", "title": "Master-Suite", "lead": "Details", "f_floor": "Etage", "f_area": "Fläche", "f_dims": "Maße", "f_aspect": "Ausrichtung", "f_ensuite": "Verbunden mit", "ph": "Folgt", "ph_photo": "Foto folgt", "ph_text": "Beschreibung folgt: ein paar Zeilen über das Licht, den Ausblick und die Nutzung des Raums.", "about": "Beschreibung", "fin": "Ausstattung", "fin_floor": "Boden", "fin_walls": "Wände", "fin_ceil": "Decke", "fin_light": "Beleuchtung", "fin_heat": "Heizen und Kühlen", "fin_heat_v": "Luft-Wasser-Wärmepumpe", "fin_win": "Fenster und Läden", "where": "Grundriss", "plan_cap": "Grundriss des 2. Obergeschosses, Master-Suite hervorgehoben", "cta_h": "Überzeugen Sie sich selbst", "cta_p": "Besichtigungen nur nach Vereinbarung.", "cta": "Besichtigung vereinbaren", "notice": "Vorschau. Gestrichelt umrandete Angaben sind Platzhalter, die vor dem Start ergänzt werden.", "foot": "ZU VERKAUFEN · Felanitx, Mallorca", "doc": "Master-Suite · Can Vaquer", "nav_rooms": "Fotos", "nav_feat": "Ausstattung", "nav_plans": "Grundrisse", "nav_house": "Das Haus", "nav_hist": "Geschichte", "nav_location": "Lage", "nav_contact": "Besichtigung", "menu": "Menü"}};
 function setLang(l){
   if(!I18N[l]) l="en"; const d=I18N[l];
   document.documentElement.lang=l; document.title=d.doc;
   document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n; if(d[k]!=null) el.textContent=d[k];});
   document.querySelectorAll("[data-i18n-alt]").forEach(el=>{const k=el.dataset.i18nAlt; if(d[k]!=null) el.alt=d[k];});
+  document.querySelectorAll("[data-i18n-aria]").forEach(el=>{const k=el.dataset.i18nAria; if(d[k]!=null) el.setAttribute("aria-label",d[k]);});
   const nf=new Intl.NumberFormat(l==="en"?"en-GB":l,{minimumFractionDigits:1,maximumFractionDigits:1});
   document.querySelectorAll("[data-area]").forEach(el=>{el.textContent=nf.format(+el.dataset.area)+"\u00a0m²";});
   document.querySelectorAll(".langs button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===l)));
@@ -398,6 +436,11 @@ function setLang(l){
   try{localStorage.setItem("cv-lang",l)}catch(e){}
 }
 document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>{setLang(b.dataset.lang); try{history.replaceState(null,"","#"+b.dataset.lang)}catch(e){}}));
+const menuBtn=document.getElementById("menu-btn"), mainNav=document.getElementById("main-nav");
+function setMenu(open){mainNav.classList.toggle("open",open);menuBtn.setAttribute("aria-expanded",String(open));}
+menuBtn.addEventListener("click",()=>setMenu(!mainNav.classList.contains("open")));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&mainNav.classList.contains("open")){setMenu(false);menuBtn.focus();}});
+document.addEventListener("click",e=>{if(mainNav.classList.contains("open")&&!mainNav.contains(e.target)&&!menuBtn.contains(e.target))setMenu(false);});
 let start=location.hash.slice(1);
 if(!I18N[start]){try{start=localStorage.getItem("cv-lang")}catch(e){}}
 if(!I18N[start]) start=(navigator.language||"en").slice(0,2);
