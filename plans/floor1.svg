@@ -2,7 +2,7 @@
 .pw{fill:#ECE8E1}
 .pe{fill:url(#dots)}
 .pg{fill:url(#dots)}
-.pp{fill:#EEF1F0}
+.pp{fill:#BDCCC2}
 .pl{fill:none;stroke:#1C1C1C;stroke-width:1.7;stroke-linejoin:miter;stroke-linecap:square}
 .pm{fill:none;stroke:#8A8A86;stroke-width:.45}
 .pf{fill:none;stroke:#A8A8A4;stroke-width:.32}
