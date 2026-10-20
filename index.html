@@ -84,7 +84,8 @@ nav.main a.nav-cta{display:none}
   nav.main.open{display:flex}
   nav.main a{padding:.9rem 0;border-bottom:1px solid var(--rule);font-size:1.05rem;color:var(--ink)}
   nav.main a:last-child{border-bottom:0}
-  nav.main a.nav-cta{display:flex;margin-top:1rem;padding:0 1.4rem;border:1px solid var(--shutter);font-size:.95rem;color:var(--plaster)}
+  nav.main a.nav-cta{display:inline-flex;align-self:flex-start;margin-top:.75rem;padding:0 1.4rem;border:1px solid var(--shutter);font-size:.95rem;color:var(--plaster)}
+  nav.main a[href$="#contact"]:not(.nav-cta){display:none}
 }
 @media (max-width:360px){.brand{font-size:1.15rem}.langs button{padding:.5rem .45rem}}
 
