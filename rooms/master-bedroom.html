@@ -52,7 +52,16 @@ a{color:inherit}
 .notice .wrap{padding-block:.55rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
 
 /* header */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--plaster) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+header.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--plaster) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);transition:background-color .35s ease,border-color .35s ease,color .35s ease}
+html{scroll-padding-top:61px}
+/* over the opening video the header is transparent with light text */
+header.top.over{background:linear-gradient(rgba(20,17,14,.42),rgba(20,17,14,0)) border-box;border-bottom-color:transparent;backdrop-filter:none;color:#F4EFE7}
+header.top.over .brand{color:#F4EFE7}
+header.top.over .langs{border-color:rgba(244,239,231,.45)}
+header.top.over .langs button{color:rgba(244,239,231,.85)}
+header.top.over .langs button[aria-pressed="true"]{background:#F4EFE7;color:#1C1916}
+header.top.over .menu-btn{border-color:rgba(244,239,231,.45);color:#F4EFE7}
+@media (min-width:1021px){header.top.over nav.main a{color:rgba(244,239,231,.88)}header.top.over nav.main a:hover{color:#fff}}
 header.top .wrap{display:flex;align-items:center;gap:1rem;min-height:60px;padding-block:.5rem}
 .brand{font-family:var(--title);font-size:1.35rem;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
 nav.main{display:flex;gap:1.4rem;margin-inline:auto}
@@ -318,6 +327,7 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 </style>
 <style>
 /* room page */
+header.top{position:sticky}
 .rp-top{padding-block:2rem 0}
 .rp-crumb{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:var(--step--1);color:var(--ink-soft)}
 .rp-crumb a{color:inherit}

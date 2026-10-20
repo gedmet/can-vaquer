@@ -58,7 +58,16 @@ a{color:inherit}
 .notice .wrap{padding-block:.55rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
 
 /* header */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--plaster) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+header.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--plaster) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);transition:background-color .35s ease,border-color .35s ease,color .35s ease}
+html{scroll-padding-top:61px}
+/* over the opening video the header is transparent with light text */
+header.top.over{background:linear-gradient(rgba(20,17,14,.42),rgba(20,17,14,0)) border-box;border-bottom-color:transparent;backdrop-filter:none;color:#F4EFE7}
+header.top.over .brand{color:#F4EFE7}
+header.top.over .langs{border-color:rgba(244,239,231,.45)}
+header.top.over .langs button{color:rgba(244,239,231,.85)}
+header.top.over .langs button[aria-pressed="true"]{background:#F4EFE7;color:#1C1916}
+header.top.over .menu-btn{border-color:rgba(244,239,231,.45);color:#F4EFE7}
+@media (min-width:1021px){header.top.over nav.main a{color:rgba(244,239,231,.88)}header.top.over nav.main a:hover{color:#fff}}
 header.top .wrap{display:flex;align-items:center;gap:1rem;min-height:60px;padding-block:.5rem}
 .brand{font-family:var(--title);font-size:1.35rem;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
 nav.main{display:flex;gap:1.4rem;margin-inline:auto}
@@ -325,23 +334,6 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
 
 </head>
 <body>
-<section class="film" aria-label="Can Vaquer">
-  <video class="film-v" autoplay muted loop playsinline preload="metadata" poster="images/courtyard.jpg" aria-hidden="true">
-    <source src="video/hero.webm" type="video/webm">
-    <source src="video/hero.mp4" type="video/mp4">
-  </video>
-  <div class="film-shade"></div>
-  <div class="film-text">
-    <p class="film-title">Can Vaquer</p>
-    <p class="film-type" data-i18n="film_type">8 Bedroom Townhouse</p>
-    <p class="film-place">Felanitx · Mallorca</p>
-    <p class="film-soon" data-i18n="film_soon">For Sale · 2027</p>
-  </div>
-  <button class="film-toggle" type="button" aria-label="Pause video" data-i18n-aria="film_pause"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/><path class="i-play" d="M8 5l11 7-11 7z" fill="currentColor"/></svg></button>
-  <a class="film-down" href="#top" aria-label="Scroll to the house" data-i18n-aria="film_down"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-</section>
-<div class="notice" role="note"><div class="wrap"><span class="ph" data-i18n="ph_tag">To confirm</span><span data-i18n="notice">Preview. Items with a dashed outline are placeholders to fill in before launch.</span></div></div>
-
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top">Can Vaquer</a>
@@ -364,6 +356,23 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
     <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="menu"><span></span></button>
   </div>
 </header>
+<section class="film" aria-label="Can Vaquer">
+  <video class="film-v" autoplay muted loop playsinline preload="metadata" poster="images/courtyard.jpg" aria-hidden="true">
+    <source src="video/hero.webm" type="video/webm">
+    <source src="video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="film-shade"></div>
+  <div class="film-text">
+    <p class="film-title">Can Vaquer</p>
+    <p class="film-type" data-i18n="film_type">8 Bedroom Townhouse</p>
+    <p class="film-place">Felanitx · Mallorca</p>
+    <p class="film-soon" data-i18n="film_soon">For Sale · 2027</p>
+  </div>
+  <button class="film-toggle" type="button" aria-label="Pause video" data-i18n-aria="film_pause"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/><path class="i-play" d="M8 5l11 7-11 7z" fill="currentColor"/></svg></button>
+  <a class="film-down" href="#top" aria-label="Scroll to the house" data-i18n-aria="film_down"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+</section>
+<div class="notice" role="note"><div class="wrap"><span class="ph" data-i18n="ph_tag">To confirm</span><span data-i18n="notice">Preview. Items with a dashed outline are placeholders to fill in before launch.</span></div></div>
+
 
 <main id="top">
   <div class="hero">
@@ -855,11 +864,16 @@ document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click"
 
 /* mobile menu */
 const menuBtn=document.getElementById("menu-btn"), mainNav=document.getElementById("main-nav");
-function setMenu(open){mainNav.classList.toggle("open",open);menuBtn.setAttribute("aria-expanded",String(open));}
+function setMenu(open){mainNav.classList.toggle("open",open);menuBtn.setAttribute("aria-expanded",String(open));setHeader();}
+/* header sits over the opening video until the video has scrolled away */
+const topHdr=document.querySelector("header.top"), film=document.querySelector(".film");
+function setHeader(){topHdr.classList.toggle("over",!!film&&!mainNav.classList.contains("open")&&scrollY<film.offsetHeight-topHdr.offsetHeight);}
+addEventListener("scroll",setHeader,{passive:true});addEventListener("resize",setHeader);
 menuBtn.addEventListener("click",()=>setMenu(!mainNav.classList.contains("open")));
 mainNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&mainNav.classList.contains("open")){setMenu(false);menuBtn.focus();}});
 document.addEventListener("click",e=>{if(mainNav.classList.contains("open")&&!mainNav.contains(e.target)&&!menuBtn.contains(e.target))setMenu(false);});
+setHeader();
 
 /* local highlights: swap in a photo when one exists */
 document.querySelectorAll(".lh-img[data-photo]").forEach(box=>{const im=new Image();im.alt="";im.decoding="async";im.onload=()=>{box.replaceChildren(im)};im.src=box.dataset.photo;});
