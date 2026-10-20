@@ -66,6 +66,7 @@ nav.main a{text-decoration:none;font-size:.9rem;color:var(--ink-soft)}
 nav.main a:hover{color:var(--ink)}
 .langs{display:flex;border:1px solid var(--rule);border-radius:999px;padding:2px;margin-left:auto}
 nav.main + .langs{margin-left:0}
+nav.main a.nav-cta{display:none}
 .langs button{font:500 .75rem/1 var(--body);letter-spacing:.08em;border:0;background:none;color:var(--ink-soft);padding:.5rem .6rem;border-radius:999px;cursor:pointer}
 .langs button[aria-pressed="true"]{background:var(--ink);color:var(--plaster)}
 .menu-btn{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--rule);border-radius:999px;background:none;color:var(--ink);cursor:pointer;flex:none}
@@ -83,6 +84,7 @@ nav.main + .langs{margin-left:0}
   nav.main.open{display:flex}
   nav.main a{padding:.9rem 0;border-bottom:1px solid var(--rule);font-size:1.05rem;color:var(--ink)}
   nav.main a:last-child{border-bottom:0}
+  nav.main a.nav-cta{display:flex;margin-top:1rem;padding:0 1.4rem;border:1px solid var(--shutter);font-size:.95rem;color:var(--plaster)}
 }
 @media (max-width:360px){.brand{font-size:1.15rem}.langs button{padding:.5rem .45rem}}
 
@@ -350,6 +352,7 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
       <a href="#history" data-i18n="nav_hist">History</a>
       <a href="#location" data-i18n="nav_location">Location</a>
       <a href="#contact" data-i18n="nav_contact">Viewings</a>
+      <a class="btn solid nav-cta" href="#contact" data-i18n="cta">Arrange a viewing</a>
     </nav>
     <div class="langs" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -369,7 +372,6 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
         <p class="lede" data-i18n="lede">17th Century 8 bedroom manor house in the historic centre of Felanitx, Mallorca</p>
         <div class="price"><span class="label" data-i18n="price">Price</span><em class="ph" data-i18n="price_v">TBC</em></div>
         <div class="actions">
-          <a class="btn solid" href="#contact" data-i18n="cta">Arrange a viewing</a>
           <a class="btn ghost" href="#rooms" data-i18n="cta2">See the photos</a>
           <a class="btn ghost" href="#plans" data-i18n="cta3">See the plans</a>
         </div>
