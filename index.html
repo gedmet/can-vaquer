@@ -990,10 +990,14 @@ document.querySelectorAll(".gallery").forEach(g=>{
 });
 lb.querySelector(".close").addEventListener("click",()=>lb.close());
 lb.addEventListener("close",()=>lbVid.pause());
-/* gallery video tiles play silently while on screen, unless reduced motion is preferred */
-if(!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window){
-  const vo=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.preload="auto";v.play().catch(()=>{});}else v.pause();}),{threshold:.25});
-  document.querySelectorAll(".gallery figure.vid video").forEach(v=>vo.observe(v));
+/* gallery video tiles play silently while on screen; if the browser blocks it, retry on the next interaction */
+if("IntersectionObserver" in window){
+  const vids=[...document.querySelectorAll(".gallery figure.vid video")], onScreen=new Set();
+  const tryPlay=v=>{v.muted=true;v.defaultMuted=true;v.preload="auto";const p=v.play();if(p)p.catch(()=>{});};
+  const vo=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){onScreen.add(v);tryPlay(v);}else{onScreen.delete(v);v.pause();}}),{threshold:.25});
+  vids.forEach(v=>{v.muted=true;vo.observe(v);});
+  const retry=()=>onScreen.forEach(v=>{if(v.paused)tryPlay(v);});
+  ["pointerdown","keydown","touchstart","wheel"].forEach(t=>addEventListener(t,retry,{passive:true}));
 }
 lb.querySelector(".lb-prev").addEventListener("click",()=>lbShow(lbI-1));
 lb.querySelector(".lb-next").addEventListener("click",()=>lbShow(lbI+1));
