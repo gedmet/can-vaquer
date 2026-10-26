@@ -110,7 +110,7 @@ nav.main a.nav-cta{display:none}
 @media (min-width:860px){.hero .arch{aspect-ratio:4/5;width:min(100%,calc(62vh*4/5));justify-self:center}}
 .mason{columns:2;column-gap:10px}
 @media (min-width:860px){.mason{columns:3;column-gap:16px}}
-.m-tile{display:block;break-inside:avoid;margin:0 0 10px;color:var(--ink-soft);text-decoration:none}
+.m-tile{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;break-inside:avoid;margin:0 0 10px;color:var(--ink-soft);text-decoration:none}
 @media (min-width:860px){.m-tile{margin-bottom:16px}}
 .m-tile img{display:block;width:100%;height:auto;object-fit:cover;background:var(--plaster-2);transition:opacity .25s}
 .m-tile:hover img{opacity:.85}
@@ -389,15 +389,15 @@ footer .brand{font-size:1.15rem;color:var(--ink)}
       <div class="hero-label"><p class="label" data-i18n="hero_label">For sale</p><em class="ph" data-i18n="hero_soon">Available in 2027</em></div>
       <h1 data-i18n="hero_title">A newly renovated 8 bedroom town house in the heart of Felanitx, Mallorca</h1>
       <div class="mason">
-        <a class="m-tile" href="#features" aria-label="The pool" data-i18n-aria="m_pool"><img style="aspect-ratio:9/16" src="images/thumbs/pool.jpg" width="720" height="1280" alt="" loading="lazy" decoding="async"></a>
-        <a class="m-tile" href="#features" aria-label="The old kitchen" data-i18n-aria="m_kitchen"><img style="aspect-ratio:4/5" src="images/thumbs/kitchen-sink.jpg" width="720" height="1082" alt="" loading="lazy" decoding="async"></a>
-        <a class="m-tile" href="#features" aria-label="The courtyard" data-i18n-aria="m_court"><img style="aspect-ratio:6/5" src="images/thumbs/courtyard.jpg" width="720" height="602" alt="" loading="lazy" decoding="async"></a>
-        <a class="m-tile" href="#features" aria-label="Eight bedrooms" data-i18n-aria="m_bed"><img style="aspect-ratio:3/4" src="images/thumbs/bedroom.jpg" width="720" height="1348" alt="" loading="lazy" decoding="async"></a>
-        <a class="m-tile" href="#features" aria-label="The house" data-i18n-aria="m_house"><img style="aspect-ratio:1/1" src="images/thumbs/facade.jpg" width="720" height="766" alt="" loading="lazy" decoding="async"></a>
-        <a class="m-tile" href="#features" aria-label="Stone fountain" data-i18n-aria="m_fount"><img style="aspect-ratio:4/5" src="images/thumbs/fountain.jpg" width="720" height="960" alt="" loading="lazy" decoding="async"></a>
-        <a class="m-tile" href="#features" aria-label="Painted tiles" data-i18n-aria="m_tiles"><img style="aspect-ratio:4/5" src="images/thumbs/tiles.jpg" width="720" height="894" alt="" loading="lazy" decoding="async"></a>
-        <a class="m-tile" href="#features" aria-label="Bathrooms" data-i18n-aria="m_bath"><img style="aspect-ratio:3/4" src="images/thumbs/basin.jpg" width="720" height="960" alt="" loading="lazy" decoding="async"></a>
-        <a class="m-tile" href="#features" aria-label="The stair" data-i18n-aria="m_stair"><img style="aspect-ratio:3/4" src="images/thumbs/stair.jpg" width="720" height="1280" alt="" loading="lazy" decoding="async"></a>
+        <button type="button" class="m-tile"><img style="aspect-ratio:9/16" src="images/thumbs/pool.jpg" data-full="images/pool.jpg" width="720" height="1280" alt="The pool beneath the stone arcade" data-i18n-alt="c_pool" loading="lazy" decoding="async"></button>
+        <button type="button" class="m-tile"><img style="aspect-ratio:4/5" src="images/thumbs/kitchen-sink.jpg" data-full="images/kitchen-sink.jpg" width="720" height="1082" alt="Stone sink and polychrome tiles in the old kitchen" data-i18n-alt="c_oldkitchen" loading="lazy" decoding="async"></button>
+        <button type="button" class="m-tile"><img style="aspect-ratio:6/5" src="images/thumbs/courtyard.jpg" data-full="images/courtyard.jpg" width="720" height="602" alt="Through the stone arch to the courtyard" data-i18n-alt="c_courtyard" loading="lazy" decoding="async"></button>
+        <button type="button" class="m-tile"><img style="aspect-ratio:3/4" src="images/thumbs/bedroom.jpg" data-full="images/bedroom.jpg" width="720" height="1348" alt="Bedroom with green shutters" data-i18n-alt="c_bedroom" loading="lazy" decoding="async"></button>
+        <button type="button" class="m-tile"><img style="aspect-ratio:1/1" src="images/thumbs/facade.jpg" data-full="images/facade.jpg" width="720" height="766" alt="The house seen from the courtyard" data-i18n-alt="c_facade" loading="lazy" decoding="async"></button>
+        <button type="button" class="m-tile"><img style="aspect-ratio:4/5" src="images/thumbs/fountain.jpg" data-full="images/fountain.jpg" width="720" height="960" alt="Carved stone wall fountain" data-i18n-alt="c_fountain" loading="lazy" decoding="async"></button>
+        <button type="button" class="m-tile"><img style="aspect-ratio:4/5" src="images/thumbs/tiles.jpg" data-full="images/tiles.jpg" width="720" height="894" alt="Original eighteenth century hand painted tiles in the old kitchen" data-i18n-alt="c_tiles" loading="lazy" decoding="async"></button>
+        <button type="button" class="m-tile"><img style="aspect-ratio:3/4" src="images/thumbs/basin.jpg" data-full="images/basin.jpg" width="720" height="960" alt="Hand-carved stone basin on a timber stand" data-i18n-alt="c_basin" loading="lazy" decoding="async"></button>
+        <button type="button" class="m-tile"><img style="aspect-ratio:3/4" src="images/thumbs/stair.jpg" data-full="images/stair.jpg" width="720" height="1280" alt="The stair to the upper floor" data-i18n-alt="c_stair" loading="lazy" decoding="async"></button>
       </div>
     </div>
   </div>
@@ -991,12 +991,12 @@ function lbShow(i){
   lbI=(i+lbSet.length)%lbSet.length; const img=lbSet[lbI];
   const v=img.dataset.video; lbVid.pause();
   if(v){lbImg.hidden=true;lbImg.removeAttribute("src");lbVid.hidden=false;lbVid.poster=img.src;if(lbVid.getAttribute("src")!==v)lbVid.src=v;lbVid.setAttribute("aria-label",img.alt);lbVid.play().catch(()=>{});}
-  else{lbVid.hidden=true;lbImg.hidden=false;lbImg.src=img.currentSrc||img.src;lbImg.alt=img.alt;}
+  else{lbVid.hidden=true;lbImg.hidden=false;lbImg.src=img.dataset.full||img.currentSrc||img.src;lbImg.alt=img.alt;}
   lbCap.textContent=img.alt;
   lbCount.textContent=String(lbI+1).padStart(2,"0")+" / "+String(lbSet.length).padStart(2,"0");
   [...lbThumbs.children].forEach((b,j)=>{b.setAttribute("aria-current",String(j===lbI));if(j===lbI)b.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});});
 }
-document.querySelectorAll(".gallery").forEach(g=>{
+document.querySelectorAll(".gallery, .mason").forEach(g=>{
   const imgs=[...g.querySelectorAll("button img")];
   imgs.forEach((img,i)=>img.closest("button").addEventListener("click",()=>{
     lbSet=imgs; lbThumbs.replaceChildren(...imgs.map((im,j)=>{const b=document.createElement("button");b.type="button";b.setAttribute("aria-label",im.alt);
