@@ -980,7 +980,7 @@ if(matchMedia("(prefers-reduced-motion: reduce)").matches){v.pause();v.removeAtt
 b.addEventListener("click",()=>{if(v.paused){v.play();setP(false);}else{v.pause();setP(true);}});
 new IntersectionObserver(([e])=>{if(f.classList.contains("paused")||f.classList.contains("no-video"))return;e.isIntersecting?v.play().catch(()=>{}):v.pause();}).observe(f);
 })();
-/* lightbox with thumbnail strip; each gallery is its own set */
+/* lightbox with thumbnail strip */
 const lb=document.getElementById("lb"), lbImg=lb.querySelector("img.lb-img"), lbVid=lb.querySelector(".lb-vid"), lbCap=lb.querySelector(".lb-cap"), lbCount=lb.querySelector(".lb-count"), lbThumbs=lb.querySelector(".lb-thumbs");
 let lbSet=[], lbI=0;
 function lbShow(i){
@@ -992,8 +992,9 @@ function lbShow(i){
   lbCount.textContent=String(lbI+1).padStart(2,"0")+" / "+String(lbSet.length).padStart(2,"0");
   [...lbThumbs.children].forEach((b,j)=>{b.setAttribute("aria-current",String(j===lbI));if(j===lbI)b.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});});
 }
-document.querySelectorAll(".gallery, .mason").forEach(g=>{
-  const imgs=[...g.querySelectorAll("button img")];
+/* all gallery sections share one set; the hero grid keeps its own */
+[document.querySelectorAll(".gallery button img"),document.querySelectorAll(".mason button img")].forEach(list=>{
+  const imgs=[...list];
   imgs.forEach((img,i)=>img.closest("button").addEventListener("click",()=>{
     lbSet=imgs; lbThumbs.replaceChildren(...imgs.map((im,j)=>{const b=document.createElement("button");b.type="button";b.setAttribute("aria-label",im.alt);
       const t=document.createElement("img");t.src=im.src;t.alt="";b.append(t);b.addEventListener("click",()=>lbShow(j));return b;}));
