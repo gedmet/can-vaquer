@@ -176,6 +176,15 @@ section > .wrap{padding-top:24px;padding-bottom:4.5rem}
 .film-toggle{position:absolute;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));display:grid;place-items:center;width:44px;height:44px;border-radius:999px;border:1px solid rgba(244,239,231,.45);background:rgba(20,17,14,.3);color:inherit;cursor:pointer}
 .film-toggle .i-play{display:none}.film.paused .film-toggle .i-play{display:block}.film.paused .film-toggle .i-pause{display:none}
 .film.no-video .film-toggle{display:none}
+/* phones held upright: the film becomes a 16:9 strip under the header so the hero shows below it */
+@media (orientation:portrait) and (max-width:859px){
+  .film{height:auto;min-height:0;aspect-ratio:16/9;margin-top:var(--hdr-h,64px)}
+  .film-text{bottom:14px;animation-name:film-in}
+  .film-type,.film-place{font-size:.625rem;letter-spacing:.2em}
+  .film-place{margin-top:.3rem}
+  .film-down{display:none}
+  .film-toggle{width:34px;height:34px;bottom:10px;right:10px}
+}
 @keyframes film-in{from{opacity:0}to{opacity:1}}
 @keyframes film-up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
@@ -948,7 +957,8 @@ const menuBtn=document.getElementById("menu-btn"), mainNav=document.getElementBy
 function setMenu(open){mainNav.classList.toggle("open",open);menuBtn.setAttribute("aria-expanded",String(open));setHeader();}
 /* header sits over the opening video until the video has scrolled away */
 const topHdr=document.querySelector("header.top"), film=document.querySelector(".film");
-function setHeader(){topHdr.classList.toggle("over",!!film&&!mainNav.classList.contains("open")&&scrollY<film.offsetHeight-topHdr.offsetHeight);}
+const filmStrip=matchMedia("(orientation:portrait) and (max-width:859px)");
+function setHeader(){document.documentElement.style.setProperty("--hdr-h",topHdr.offsetHeight+"px");topHdr.classList.toggle("over",!!film&&!filmStrip.matches&&!mainNav.classList.contains("open")&&scrollY<film.offsetHeight-topHdr.offsetHeight);}
 addEventListener("scroll",setHeader,{passive:true});addEventListener("resize",setHeader);
 menuBtn.addEventListener("click",()=>setMenu(!mainNav.classList.contains("open")));
 mainNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
