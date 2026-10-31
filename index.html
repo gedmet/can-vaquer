@@ -212,8 +212,8 @@ dialog.lb{border:0;padding:0;margin:0;background:transparent;width:100vw;height:
 dialog.lb[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto auto}
 dialog.lb::backdrop{background:#14110E}
 .lb-top{display:flex;align-items:center;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top,0px)) calc(12px + env(safe-area-inset-right,0px)) 0 calc(16px + env(safe-area-inset-left,0px));font-size:.85rem;letter-spacing:.08em;font-variant-numeric:tabular-nums}
-.lb-stage{position:relative;min-height:0;overflow:hidden}
-dialog.lb .lb-img{position:absolute;inset:0;margin:auto;display:block;max-width:calc(100% - 2*clamp(16px,6vw,84px));max-height:calc(100% - 1.5rem);width:auto;height:auto;user-select:none;-webkit-user-drag:none}
+.lb-stage{position:relative;min-height:0;overflow:hidden;margin-top:12px}
+dialog.lb .lb-img{position:absolute;inset:0;margin:auto;display:block;max-width:100%;max-height:100%;width:auto;height:auto;user-select:none;-webkit-user-drag:none}
 dialog.lb .lb-cap{text-align:center;font-size:.9rem;margin:0;padding:0 16px .6rem;min-height:1.5em}
 .lb-btn{width:44px;height:44px;border-radius:999px;border:1px solid rgba(236,229,217,.4);background:rgba(20,17,14,.5);color:#ECE5D9;cursor:pointer;display:grid;place-items:center;font-size:1.4rem;line-height:1}
 .lb-btn:focus:not(:focus-visible){outline:none}
